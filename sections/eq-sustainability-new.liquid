@@ -1,0 +1,648 @@
+<style>
+    .c-container{
+        max-width: 1310px;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+    }
+    .eq-sustainability-banner{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;        
+        padding-top: 139px;
+    }
+    .eq-sustainability-banner__wrap{
+        width: 100%;
+        margin: 0 auto;
+        background-color: #F9F6F3;
+        padding: 10px 0 10px 0;
+    }
+    .eq-sustainability-banner__content-wrap{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+    .eq-sustainability-banner__text-content{
+        max-width: 45%;
+        width: 100%;
+        padding-right: 40px;
+    }
+    .eq-sustainability-banner__text-content h1{
+        font-size: 51px;
+        line-height: 1.4;
+        color: #3B3B3B;
+        font-family: monospace, monospace;
+        margin-bottom: 46px;
+        word-break: break-all;
+    }
+    .eq-sustainability-banner__text-content h6{
+        font-size: 20px;
+        line-height: 1.4;
+        color: #3B3B3B;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+    .eq-sustainability-banner__text-content p{
+        font-size: 20px;
+        line-height: 1.4;
+        color: #3B3B3B;
+        padding-right: 80px;
+    }
+    .eq-sustainability-banner__image-content{
+        max-width: 55%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: -74px;
+    }
+    .eq-sustainability-banner__video-wrap{
+        position: relative;
+        padding-bottom: 72.4%;
+        max-width: 382px;
+        width: 100%;
+    }
+    .eq-sustainability-banner__video-wrap > img,
+    .eq-sustainability-banner__video-wrap > video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .eq-sustainability-banner__image-wrap{
+        max-width: 244px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 28px;
+        padding-top: 20px;
+    }
+    .eq-sustainability-banner__image-wrap figure{
+        margin: 0;
+        position: relative;
+    }
+    .eq-sustainability-banner__image-wrap figure.first-image{
+        max-width: 244px;
+        width: 100%;
+        padding-bottom: 97.132%;
+    }
+    .eq-sustainability-banner__image-wrap figure.first-image img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .eq-sustainability-banner__image-wrap figure.second-image{
+        max-width: 200px;
+        width: 100%;
+        padding-bottom: 74.6%;
+        margin-top: 30px;
+    }
+    .eq-sustainability-banner__image-wrap figure.second-image img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .sustainability-video{
+        cursor: pointer;
+    }    
+    .icon-play-pause-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .35s ease-in-out;
+    }
+    .icon-play-pause-btn .icon-play{
+        max-width: 50px;
+        width: 100%;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 11px;
+        border-radius: 50%;
+    }
+    .icon-play-pause-btn .icon-pause{
+        max-width: 50px;
+        width: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 11px;
+        border-radius: 50%;
+    }
+    .sustainability-video.play ~ .icon-play-pause-btn .icon-play{
+        display: none;
+    }
+    .sustainability-video.play ~ .icon-play-pause-btn .icon-pause{
+        display: block;
+    }
+    .eq-sustainability-banner__video-wrap:hover .icon-play-pause-btn{
+        opacity: 1;
+        visibility: visible;
+    }
+    /* //////////////////////////////// */
+    .walking-towards{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0 49px;
+        background-color: #F9F6F3;
+    }
+    .walking-towards__wrap{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .walking-towards__top-image{
+        width: 100%;
+        background-color: #F5E3CC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 164px;       
+    }
+    .walking-towards__top-image figure{
+        max-width: 358px;
+        width: 100%;
+        position: relative;
+        padding-bottom: 20%;
+        margin: 0;
+        top: 103px;
+    }
+    .walking-towards__top-image img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .walking-towards__content{
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .walking-towards__content h2{
+        font-size: 34px;
+        color: #000000;
+        line-height: 1.4;
+        font-family: monospace, monospace;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .walking-towards__content p{
+        font-size: 18px;
+        line-height: 1.4;
+        color: #000000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .walking-towards__content ul{
+        width: 100%;
+        list-style-type: disc;
+    }
+    .walking-towards__content ul li{
+        font-size: 18px;
+        line-height: 1.4;
+        color: #000000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .walking-towards__content ul li:last-child{
+        margin-bottom: 0;
+    }
+    /* ////////////////////////// */
+    .two-col-section{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0 10px;
+    }
+    .two-col-section__wrap{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .two-col-section__wrap .box{
+        max-width: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 30px 60px;
+    }
+    .two-col-section__wrap .box figure{
+        width: 100%;
+        position: relative;
+        padding-bottom: 70%;
+        margin: 0;
+    }
+    .two-col-section__wrap .box figure img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .two-col-section__wrap .box h4{
+        font-size: 24px;
+        line-height: 1.4;
+        color: #000000;
+        text-align: left;
+        margin-top: 13px;
+        margin-bottom: 0;
+    }
+    .two-col-section__wrap .box p{
+        font-size: 18px;
+        line-height: 1.4;
+        color: #000000;
+        text-align: left;
+        text-align: justify;
+        margin-top: 14px;
+        margin-bottom: 0;
+    }
+    /* ///////////////////////////// */
+    .philosophy-packaging{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 80px 0 0;
+        background-color: #F9F6F3;
+    }
+    .philosophy-packaging.pt-40{
+        padding-top: 40px;
+    }
+    .philosophy-packaging__wrap{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 60px;
+    }
+    .philosophy-packaging__wrap.reverse{
+        flex-direction: row-reverse;
+        padding-bottom: 80px;
+    }
+    .philosophy-packaging__wrap.reverse .philosophy-packaging__content{
+        padding-left: 0;
+        padding-right: 60px;
+    }
+    .philosophy-packaging__image{
+        max-width: 350px;
+        width: 100%;
+        position: relative;
+        padding-bottom: 60%;
+        margin: 0;
+    }
+    .philosophy-packaging__image:hover .icon-play-pause-btn{
+        opacity: 1;
+        visibility: visible;
+    }
+    .philosophy-packaging__image > img,
+    .philosophy-packaging__image > video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .philosophy-packaging__content{
+        max-width: calc(100% - 350px);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 60px;
+    }
+    .philosophy-packaging__content h2{
+        font-size: 29px;
+        text-transform: uppercase;
+        line-height: 1.4;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+    .philosophy-packaging__content .desc-text{
+        width: 100%;
+    }
+    .philosophy-packaging__content .desc-text p{
+        font-size: 19px;
+        line-height: 1.4;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+    .philosophy-packaging__content .desc-text p:last-child{
+        margin-bottom: 0;
+    }
+    /* //////////////////////////// */
+    @media only screen and (max-width: 991px){
+        .eq-sustainability-banner{
+            padding-top: 0;
+        }
+        .eq-sustainability-banner__content-wrap{
+            flex-direction: column;
+            padding: 40px 0 20px;
+        }
+        .eq-sustainability-banner__text-content{
+            max-width: 100%;
+            padding: 0;
+        }
+        .eq-sustainability-banner__image-content{
+            max-width: 100%;
+            margin-top: 30px;
+        }
+        .eq-sustainability-banner__text-content p{
+            padding-right: 0;
+        }
+        .two-col-section__wrap .box{
+            padding: 20px 15px;
+        }
+        .philosophy-packaging__wrap{
+            padding: 0;
+        }
+        .philosophy-packaging__content{
+            padding-left: 30px;
+        }
+        .philosophy-packaging__content h2{
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .philosophy-packaging__content .desc-text p{
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        .philosophy-packaging.pt-40{
+            padding: 20px 0;
+        }
+        .philosophy-packaging__wrap.reverse .philosophy-packaging__content{
+            padding-right: 30px;
+        }
+        .philosophy-packaging{
+            padding-top: 60px;
+        }
+        .philosophy-packaging__image{
+            padding-bottom: 100%;
+        }
+        .philosophy-packaging__wrap.reverse{
+            padding-bottom: 40px;
+        }
+        .walking-towards__top-image figure{
+            padding-bottom: 40%;
+        }
+    }
+    @media only screen and (max-width: 767px){
+        .icon-play-pause-btn{
+            display: none;
+        }
+        .eq-sustainability-banner__text-content p{
+            font-size: 16px;
+        }
+        .philosophy-packaging__content h2{
+            font-size: 22px;
+        }
+        .philosophy-packaging__content .desc-text p{
+            font-size: 16px;
+        }
+        .eq-sustainability-banner__text-content h6{
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+        .eq-sustainability-banner__text-content h1{
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        .eq-sustainability-banner__image-wrap{
+            margin-left: 15px;
+        }
+        .two-col-section{
+            padding: 20px 0;
+        }
+        .two-col-section__wrap .box h4{
+            font-size: 20px;
+        }
+        .two-col-section__wrap .box p{
+            font-size: 16px;
+            margin-top: 12px;
+        }
+        .eq-sustainability-banner__wrap{
+            padding: 0;
+        }
+        .philosophy-packaging__wrap{
+            flex-direction: column;
+        }
+        .philosophy-packaging__content{
+            max-width: 100%;
+            padding-left: 0;
+            margin-top: 30px;
+        }
+        .philosophy-packaging__wrap.reverse .philosophy-packaging__content{
+            padding-right: 0px;
+        }
+        .philosophy-packaging__wrap.reverse{
+            flex-direction: column;
+        }
+        .philosophy-packaging{
+            padding-top: 40px;
+        }
+        .walking-towards__top-image figure{
+            top: 35px;
+        }
+        .walking-towards__top-image{
+            padding: 15px;
+            margin-bottom: 44px;
+        }
+        .walking-towards__content h2{
+            font-size: 26px;
+            margin-bottom: 14px;
+        }
+        .walking-towards__content p{
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .walking-towards__content ul li{
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+    @media only screen and (max-width: 575px){
+        .two-col-section__wrap .box{
+            max-width: 100%;
+            padding: 20px 0;
+        }
+        .philosophy-packaging__image{
+            max-width: 100%;
+            padding-bottom: 170%;
+        }
+    }
+
+</style>
+
+
+<section class="eq-sustainability-banner">
+    <div class="eq-sustainability-banner__wrap">
+        <div class="c-container">
+            <div class="eq-sustainability-banner__content-wrap">
+                <div class="eq-sustainability-banner__text-content">
+                    <h1>Sostenibilidad</h1>
+                    <h6>LA SOSTENIBILIDAD, NUESTRO MANTRA</h6>
+                    <p>Hemos dedicado mucho tiempo y esfuerzos en buscar soluciones y maneras de producir de forma sostenible. Tenemos claro que no es fácil pero también que es una filosofía de empresa que nos acompaña en todas las decisiones que tomamos.</p>
+                </div>
+                <div class="eq-sustainability-banner__image-content">
+                    <div class="eq-sustainability-banner__video-wrap">
+                        <video width="100%" height="100%" muted="" playsinline="" loop="" autoplay="" class="sustainability-video play">
+                            <source src="{{ 'sustainability-banner-video.mp4' | file_url }}" type="video/mp4">
+                        </video>
+                        <div class="icon-play-pause-btn">
+                            <a href="javascript:void(0)" class="icon-play">
+                                <img src="{{ 'icon-video-play.png' | file_img_url: 'master' }}" alt="">
+                            </a>
+                            <a href="javascript:void(0)" class="icon-pause">
+                                <img src="{{ 'video-pause.png' | file_img_url: 'master' }}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="eq-sustainability-banner__image-wrap">
+                        <figure class="first-image">
+                            <img src="{{ 'sustainability-banner-img1.jpg' | file_img_url: 'master' }}" alt="">
+                        </figure>
+                        <figure class="second-image">
+                            <img src="{{ 'sustainability-banner-img2.jpg' | file_img_url: 'master' }}" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</section>
+<section class="two-col-section">
+    <div class="c-container">
+        <div class="two-col-section__wrap">
+            <div class="box">
+                <figure>
+                    <img src="{{ 'two-col-img1.png' | file_img_url: 'master' }}" alt="">
+                </figure>
+                <h4>Apostamos por el km0</h4>
+                <p>Somos muy conscientes de que el transporte es uno de los principales responsables de la huella de carbono. Por eso buscamos proveedores que estén cerca de nuestro laboratorio en Barcelona.</p>
+            </div>
+            <div class="box">
+                <figure>
+                    <img src="{{ 'two-col-img2.jpg' | file_img_url: 'master' }}" alt="">
+                </figure>
+                <h4>Skinmalism para reducir el consumo</h4>
+                <p>¿Una marca de cosmética diciendo que reduzcas cosméticos? Así es amigx. Apostamos por el minimalismo cosmético. Pocos productos pero muy buenos que puedan realizar varias funciones.</p>
+            </div>
+            <div class="box">
+                <figure>
+                    <img src="{{ 'two-col-img3.png' | file_img_url: 'master' }}" alt="">
+                </figure>
+                <h4>Ingredientes y proveedores seleccionados</h4>
+                <p>Sabemos que la sostenibilidad no acaba en nosotras. Sino que va más allá. En nuestros proveedores, en nuestros ingredientes. Nos aseguramos que todos tengamos la misma filosofía.</p>
+            </div>
+            <div class="box">
+                <figure>
+                    <img src="{{ 'two-col-img4.jpg' | file_img_url: 'master' }}" alt="">
+                </figure>
+                <h4>Transparencia formativa</h4>
+                <p>Realizamos una labor formativa a través de @partners.incream y en @twopolescosmetics para que cada persona entienda y sepa lo que debe comprar. Para que solo compre lo que necesite. Y nada más.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="philosophy-packaging pt-40"> 
+    <div class="c-container">
+        <div class="philosophy-packaging__wrap">
+            <figure class="philosophy-packaging__image">
+                <img src="{{ 'sustainability-banner-img1.jpg' | file_img_url: 'master' }}" alt="">
+            </figure>
+            <div class="philosophy-packaging__content">
+                <h2>MUCHO MÁS QUE ENVASES, UNA FILOSOFÍA</h2>
+                <div class="desc-text">
+                    <p>Nuestra cajas son 100% reciclables</p>
+                    <p>Las que utilizamos para el envío están hechas con 70% de cartón reciclado y son 100% reciclables. La cobertura exterior es de kraft y proviene de bosques sostenibles. Disponen del certificado FSC y se fabrican cerca de la provincia de Barcelona, para limitar la huella de carbono del transporte y fomentar el trabajo local.</p>
+                    <p>Nuestras cajas de envase, que únicamente utilizamos cuando es estrictamente necesario, están hechas con pasta química ECF y permiten su reciclabilidad al 100% hasta 5 veces.</p>
+                    <p>Las realizamos en una fábrica de papel histórica de 1714 cerca de Barcelona (Capellades) y la empresa está certificada según normas ISO 9001 y ISO 14001.</p>
+                    <p>Nuestros tubos están hechos con plástico reciclado y se fabrican en España, nunca usamos plástico de embalaje.</p>
+                    <p>Con estas medidas, sabemos que estamos haciendo todo lo que está en nuestra mano, a día de hoy, para ser más sostenibles. Pero tenemos claro que hay que seguir caminando e ir más allá.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="philosophy-packaging"> 
+    <div class="c-container">
+        <div class="philosophy-packaging__wrap reverse">
+            <figure class="philosophy-packaging__image">
+                <video width="100%" height="100%" muted="" playsinline="" loop="" autoplay="" class="sustainability-video play">
+                    <source src="{{ 'sustainability-banner-video.mp4' | file_url }}" type="video/mp4">
+                </video>
+                <div class="icon-play-pause-btn">
+                    <a href="javascript:void(0)" class="icon-play">
+                        <img src="{{ 'icon-video-play.png' | file_img_url: 'master' }}" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="icon-pause">
+                        <img src="{{ 'video-pause.png' | file_img_url: 'master' }}" alt="">
+                    </a>
+                </div>
+            </figure>
+            <div class="philosophy-packaging__content">
+                <h2>INGREDIENTES UP-CYCLING, QUE VAN MÁS ALLÁ</h2>
+                <div class="desc-text">
+                    <p>La sostenibilidad no solo está en los envases o los embalajes. En Two Poles, hemos querido dar un paso más allá y también tener presente el cuidado del medio ambiente en la fabricación de nuestros productos.</p>
+                    <p>Para ello, contamos con ingredientes Up-cycling en algunos de nuestros productos como el Make-up Melting Cleansing Oil. Se trata de aceite proveniente de mermas de otras fabricaciones de altísima calidad, pero que no se puede reaprovechar para  el consumo alimentario. Aún así, sí es viable en cosmética ya que mantiene su alta calidad, y pasa por unos estrictos controles sanitarios y técnicos.</p>
+                    <p>De esta forma, aprovechamos estas mermas evitando que se desperdicien en el medio ambiente, y evitando gastar más recursos para fabricar un aceite de oliva de nuevo para nuestro producto.</p>
+                    <p>Así, el Cleasing Oil se convierte en nuestro producto más sostenible, pero también el más especial. Además de este ingrediente up-cycling, está hecho con aceite de oliva Virgen Extra procedente de los olivos de la família de Anna, nuestra fundadora, en Valencia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="walking-towards">
+    <div class="c-container">
+        <div class="walking-towards__wrap">
+            <div class="walking-towards__top-image">
+                <figure>
+                    <img src="{{ 'sustainability-img.jpg' | file_img_url: 'master' }}" alt="">
+                </figure>
+            </div>
+            <div class="walking-towards__content">
+                <h2>Caminando hacia la sostenibilidad</h2>
+                <p>Como en todo lo que hacemos queremos ser muy claras contigo: a día de hoy no somos 100 % sostenibles. Pero ponemos todo nuestro empeño en serlo. Nos mejoramos día a día, investigamos y planificamos para poder llegar allí. </p>
+                <p>Por eso, hemos trazado una ruta para los siguientes años para que, pasito a paso, los consigamos. Porque la sostenibilidad no es una meta, es un camino. </p>
+                <p><b>¿Cuáles son nuestros objetivos?</b></p>
+                <ul>
+                    <li>En 2024 queremos incluir más ingredientes  up-cycling en nuestras fórmulas. Es decir, ingredientes que provienen de residuos y mermas de otras fabricaciones.</li>
+                    <li>En 2028 queremos llegar a ser carbón neutral. Es decir, eliminar de la atmósfera tanto CO2 como el que emitimos. Sabemos que reducir la huella de carbono, no basta.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

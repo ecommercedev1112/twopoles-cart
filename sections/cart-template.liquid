@@ -1,0 +1,357 @@
+{%- capture section_settings -%}
+{
+  "type": {{ settings.cart_type | json }},
+  "itemCount": {{ cart.item_count }},
+  "drawer": false,
+  "hasShippingEstimator": {% if section.settings.show_shipping_estimator and cart.item_count > 0 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+
+<section data-section-id="{{ section.id }}" data-section-type="cart" data-section-settings='{{ section_settings }}'>
+  {%- if cart.item_count == 0 -%}
+    <div class="EmptyState">
+      <div class="Container">
+        <h1 class="EmptyState__Title Heading u-h5">{{ 'cart.general.empty' | t }}</h1>
+
+        {%- if settings.cart_show_free_shipping_threshold -%}
+          {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+          {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+
+          <p class="Text--subdued">{{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}</p>
+        {%- endif -%}
+
+        <a href="{{ routes.all_products_collection_url }}" class="EmptyState__Action Button Button--primary">{{ 'cart.general.empty_button' | t }}</a>
+      </div>
+    </div>
+  {%- else -%}
+    <div class="Container">
+      <header class="PageHeader">
+        <div class="SectionHeader SectionHeader--center">
+          <h1 class="SectionHeader__Heading Heading u-h1">{{ 'cart.general.title' | t }}</h1>
+
+          {%- if settings.cart_show_free_shipping_threshold -%}
+            {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+
+            <p class="SectionHeader__Description Text--subdued">
+              {%- if cart.total_price >= threshold_in_cents -%}
+                {{- 'cart.general.free_shipping' | t -}}
+              {%- else -%}
+                {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+                {{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}
+              {%- endif -%}
+            </p>
+          {%- endif -%}
+        </div>
+      </header>
+      {% assign heading = 'Sample Products' %}
+      <div id="cart-content-cart" class="PageContent">
+        {% comment %}
+        <div class="you-may-also-like">
+          <div class="container">    
+            <div class="section-title">
+              <h2>{{ section.settings.sample_heading }}</h2>
+            </div>
+            <div class="section-content cart-page-new-slider">
+                {% assign disCount = 0 %}
+                {% assign counter = 0 %}
+                
+                {% for item in cart.items %}
+                  {% assign upsell_product_array = upsell_product_array | append:item.id | append:',' %}
+                {% endfor %}
+                
+                {% for block in section.blocks %}
+                  {% if upsell_product_array contains block.settings.related_product.selected_or_first_available_variant.id %}
+                    {% assign counter = counter | plus: 1 %}
+                  {% endif %}
+                {% endfor %}
+                
+                {% assign disCount = counter %}
+                {% unless upsell_product_array contains product.selected_or_first_available_variant.id %}
+                 {% for block in section.blocks %}
+                   {% if block.type == "related-product" %}
+                    {% assign product = all_products[block.settings.related_product] %}
+                  <div class="box js-pro">
+                    <figure>
+                      <a href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url : 'master' }}" alt="">
+                      </a>
+                    </figure>
+                    <h6>
+                      <a href="{{ product.url }}">{{ product.title }}</a>
+                    </h6>
+                    {% comment %}
+                    <span class="product-price">
+                      {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                        <del>
+                          {{ product.selected_or_first_available_variant.compare_at_price | money }}</del>
+                      {% endif %}
+                      {{ product.selected_or_first_available_variant.price | money }}
+                    </span>
+                      {% endcomment %}
+                    <select
+                      name="id"
+                      class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                      id="cart_select">
+
+                      {% for variant in product.variants %}
+                        {% if variant.compare_at_price > variant.price %}
+                          {% assign discount = 0 %}
+                          {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                          {% assign discount = discount | times: 100 %}
+                          {% assign discount = discount | divided_by: variant.compare_at_price %}
+                        {% endif %}
+                        <option
+                          value="{{variant.id}}"
+                          {% if variant.id == product.selected_or_first_available_variant.id %}
+                          selected
+                          {% endif %}
+                          data-price="{{variant.price}}"
+                          data-compare_at_price="{{variant.compare_at_price}}"
+                          data-image="{{variant.img | img_url : 'master' }}"
+                          data-available="{{variant.available}}"
+                          data-option1value="{{variant.option1 | escape}}"
+                          data-option2value="{{variant.option2 | escape}}"
+                          data-option3value="{{variant.option3 | escape}}"
+                          data-discount="{{discount}}">
+                          {{ variant.title }}</option>
+                      {% endfor %}
+                    </select>
+                      {% if upsell_product_array contains product.selected_or_first_available_variant.id %}
+                          <a href="javascript:void(0)" id="jssamplerem" class="btn-quick-shop sample-cart-atc-btn js-pro-selected js-sample-cart-rem" data-var-id="{{  product.selected_or_first_available_variant.id }}">ELIMINAR</a>
+                      {% else %}
+                         <a href="javascript:void(0)" data-added-count="{{disCount}}" class="btn-quick-shop sample-cart-atc-btn sample-atc-btn {% if disCount == 1 and cart.total_price < 3000 %} btn-dissble {% elsif disCount == 2 and cart.total_price > 3000 %} btn-dissble {% elsif disCount == 2 and cart.total_price < 3000 %} btn-dissble {% endif %}" {% if disCount == 1 and cart.total_price < 3000 %} {% elsif disCount == 2 and cart.total_price > 3000 %} {% elsif disCount == 2 and cart.total_price < 3000 %} {% else %} data-var-id="{{  product.selected_or_first_available_variant.id }}" {% endif %}>AÑADIR</a>  
+                      {% endif %}
+                  </div>
+            {% endif %}
+        {% endfor %}
+       {% endunless %}
+            </div>
+          </div>
+        </div>
+       {% endcomment %}
+        <form action="{{ routes.cart_url }}" method="POST" class="Cart Cart--expanded" novalidate>
+          <input type="hidden" name="attributes[collection_mobile_items_per_row]" value="">
+          <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
+
+          {% render 'cart-items' %}
+          {% if settings.show_wrap_for_gift %}
+          <div class="checkbox-wraper checkbox-wraper--cartpage">
+            <img src="{{ 'cart-gift-img.jpg' | file_img_url : 'master' }}" alt="" class="" loading="lazy" />
+            <div class="form-group">
+              <h6>¿quieres tu paquetito así de bonito? :)</h6>
+              <input type="checkbox" id="giftaddcart">
+              <label for="giftaddcart">marca la casilla y nosotras nos encargamos de todo (lo quiero para regalo, +1€)</label>
+            </div>
+          </div>
+          {% endif %}
+          {% comment %}
+          <div class="you-may-also-like">
+            <div class="container">    
+              <div class="section-title">
+                <h2>{{ section.settings.heading }}</h2>
+              </div>
+              <div class="section-content our-exclusive-new-slider">
+                <form
+                  action="/cart/add"
+                  method="post"
+                  enctype="multipart/form-data"
+                  id="addToCartForm">
+                  {% for block in section.blocks %}
+                    {% if block.type == "suggestion-product" %}
+                    {% assign product = all_products[block.settings.suggestion_product] %}
+
+                    <div class="box js-pro">
+                      <figure>
+                        <a href="{{ product.url }}">
+                          <img src="{{ product.featured_image | img_url : 'master' }}" alt="">
+                        </a>
+                      </figure>
+                      <h6>
+                        <a href="{{ product.url }}">{{ product.title }}</a>
+                      </h6>
+                      <span class="product-price">
+                        {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                          <del>
+                            {{ product.selected_or_first_available_variant.compare_at_price | money }}</del>
+                        {% endif %}
+                        {{ product.selected_or_first_available_variant.price | money }}
+                      </span>
+                      <select
+                        name="id"
+                        class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                        id="cart_select">
+
+                        {% for variant in product.variants %}
+                          {% if variant.compare_at_price > variant.price %}
+                            {% assign discount = 0 %}
+                            {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                            {% assign discount = discount | times: 100 %}
+                            {% assign discount = discount | divided_by: variant.compare_at_price %}
+                          {% endif %}
+                          <option
+                            value="{{variant.id}}"
+                            {% if variant.id == product.selected_or_first_available_variant.id %}
+                            selected
+                            {% endif %}
+                            data-price="{{variant.price}}"
+                            data-compare_at_price="{{variant.compare_at_price}}"
+                            data-image="{{variant.img | img_url : 'master' }}"
+                            data-available="{{variant.available}}"
+                            data-option1value="{{variant.option1 | escape}}"
+                            data-option2value="{{variant.option2 | escape}}"
+                            data-option3value="{{variant.option3 | escape}}"
+                            data-discount="{{discount}}">
+                            {{ variant.title }}</option>
+                        {% endfor %}
+                      </select>
+                      <a href="javascript:void(0)" class="btn-quick-shop cart-page-atc-btn"" data-var-id="{{  product.selected_or_first_available_variant.id }}">AÑADIR</a>
+                      <a href="{{ product.url }}" class="link-view-product">ver producto</a>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </form>
+              </div>
+            </div>
+          </div>
+          {% endcomment %}
+          <footer class="Cart__Footer">
+            {%- if settings.cart_enable_notes -%}
+              <div class="Cart__NoteContainer">
+                <span class="Cart__NoteButton">{{ 'cart.general.add_note' | t }}</span>
+                <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="4" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
+              </div>
+            {%- endif -%}
+
+            <div class="Cart__Recap">
+              {%- capture shipping_and_taxes_notice -%}{{ 'cart.general.shipping_and_taxes_notice' | t }}{%- endcapture -%}
+
+              {%- if cart.cart_level_discount_applications != blank -%}
+                {%- for discount_application in cart.cart_level_discount_applications -%}
+                  <p class="Cart__Discount Heading u-h6">{{ 'cart.general.discount' | t }} ({{ discount_application.title }}): -<span>{{ discount_application.total_allocated_amount | money_without_trailing_zeros }}</span></p>
+                {%- endfor -%}
+              {%- endif -%}
+
+              <p class="Cart__Total Heading u-h6">{{ 'cart.general.total' | t }}: <span>{{ cart.total_price | money_without_trailing_zeros }}</span></p>
+
+              <div id="scalapay-cart-page-widget" style="text-align:right;">
+                  {%- assign selectors = '#shopify-section-cart-template > section > div > div > form > footer > div > p.Cart__Total.Heading.u-h6 > span' -%}
+                  {% capture price_box_selector %}#shopify-section-cart-template{% endcapture %}	
+                  {% comment %}Scalapay widget. To disable set enabled to false{% endcomment %}
+                  {% render 'scalapay-widget', price: cart.total_price, selectors: selectors, price_box_selector: price_box_selector, size: 100 %}
+              </div>
+
+    
+              {%- if shipping_and_taxes_notice != blank -%}
+                <p class="Cart__Taxes Text--subdued">{{ shipping_and_taxes_notice }}</p>
+              {%- endif -%}
+
+              <button type="submit" name="checkout" class="Cart__Checkout Button Button--primary Button--full js_discoun_checkout" data-id="{{settings.gift_product.selected_or_first_available_variant.id}}">{{ 'cart.general.checkout' | t }}</button>
+            </div>
+          </footer>
+        </form>
+
+        {%- if section.settings.show_shipping_estimator -%}
+          <div class="Section Section--spacingExtraLarge">
+            <div class="Panel">
+              <h2 class="Panel__Title Heading u-h2">{{ 'cart.shipping_estimator.title' | t }}</h2>
+
+              <div class="Panel__Content">
+                <div class="ShippingEstimator">
+                  <div class="ShippingEstimator__Form">
+                    <div class="ShippingEstimator__Country Form__Select Select Select--primary">
+                      {%- render 'icon' with 'select-arrow' -%}
+                      <select name="country" title="{{ 'cart.shipping_estimator.country' | t }}" data-default="{% if customer %}{{ customer.default_address.country }}{% elsif section.settings.shipping_estimator_default_country != '' %}{{ section.settings.shipping_estimator_default_country }}{% endif %}">{{ country_option_tags }}</select>
+                    </div>
+
+                    <div class="ShippingEstimator__Province Form__Select Select Select--primary" style="display: none">
+                      {%- render 'icon' with 'select-arrow' -%}
+                      <select name="province" title="{{ 'cart.shipping_estimator.province' | t }}"></select>
+                    </div>
+
+                    <input type="text" class="ShippingEstimator__Zip Form__Input" name="zip" placeholder="{{ 'cart.shipping_estimator.zip_code' | t }}">
+
+                    <button type="button" class="ShippingEstimator__Submit Button Button--primary">{{ 'cart.shipping_estimator.estimate' | t }}</button>
+                  </div>
+
+                  <div class="ShippingEstimator__Error Alert Alert--error" style="display: none"></div>
+                  <div class="ShippingEstimator__Results">
+                    <div class="ShippingEstimator__ResultsInner"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Cart page",
+  "class": "shopify-section--bordered",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_shipping_estimator",
+      "label": "Show shipping rates calculator",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shipping_estimator_default_country",
+      "label": "Default country to use",
+      "info": "If your customer is logged-in, the country in his default shipping address will be selected.",
+      "default": "United States"
+    },
+    {
+      "type": "header",
+      "content": "Sample Products"
+    },
+    {
+       "type":"textarea",
+       "id":"sample_heading",
+       "label":"Heading",
+       "default":"YOU MAY ALSO LIKE OUR EXCLUSIVE MERCHANDISE"
+    }, 
+    {
+      "type": "header",
+      "content": "Related Products"
+    },
+    {
+       "type":"textarea",
+       "id":"heading",
+       "label":"Heading",
+       "default":"YOU MAY ALSO LIKE OUR EXCLUSIVE MERCHANDISE"
+    }
+  ],
+  "blocks": [
+      {
+        "type": "related-product",
+        "name": "Related Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "related_product",
+            "label": "Related Product"
+          }
+        ]
+      },
+      {
+        "type": "suggestion-product",
+        "name": "Suggestion Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "suggestion_product",
+            "label": "Suggestion Product"
+          }
+        ]
+      }
+ 
+    ]
+  }
+{% endschema %}

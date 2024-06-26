@@ -1,0 +1,1192 @@
+<section class="routine-finder">
+  <div class="cus-container">
+    <form id="msform">
+      <!-- progressbar -->
+      <ul id="progressbar">
+        <li id="stepOne"></li>
+        <li id="stepTwo"></li>
+        <li id="stepThree"></li>
+        <li id="stepFour"></li>
+        <li id="stepFive"></li>
+        <li id="stepSix"></li>
+        <li id="stepSaven"></li>
+        <li id="stepEight"></li>
+      </ul>
+      <div class="progress-complate-count">
+        <span class="progress-bar">0%</span>
+      </div>
+      <br>
+      <!-- fieldsets -->
+      {% comment %}Question-1 {% endcomment %}
+      <fieldset class="fieldset-wrap">
+        <div class="quetion-answer-wrap">
+          <div class="title que1" data-question="1. Vamos a conocernos mejor. ¿Cómo te llamas?">
+            <h2><span>1.</span> Vamos a conocernos mejor. ¿Cómo te llamas?</h2>
+          </div>
+          <div class="option-select-wrap">
+            <div class="cus-form-group w-100">
+              <input type="text" class="cus-form-control-text customer_name" name="question1"
+                placeholder="Por favor, escriba su nombre">
+            </div>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <button class="next action-button q1" disabled>next</button>
+        </div>
+      </fieldset>
+      {% comment %} Question-2 {% endcomment %}
+
+      <fieldset class="fieldset-wrap">
+        <div class="quetion-answer-wrap">
+
+          <div class="title que2" data-question="2. ¿Qué edad tienes? Aunque para nosotras la piel no tiene edad, sinó necesidades, esto nos ayudará a orientarnos un poco">
+            <h2><span>2.</span> ¿Qué edad tienes? Aunque para nosotras la piel no tiene edad, sinó
+              necesidades, esto nos
+              ayudará a orientarnos un poco</h2>
+          </div>
+          <div class="option-select-wrap">
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_one" id="1826" name="question2" value="1" data-value="18-26">
+              <label for="1826" class="cus-form-label">18-26</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_one" id="De2634" name="question2" value="2" data-value="De 27-34">
+              <label for="De2634" class="cus-form-label">De 27-34</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_one" id="De3439" name="question2" value="3" data-value="De 35-39">
+              <label for="De3439" class="cus-form-label">De 35-39</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_one" id="De39a45" name="question2" value="4" data-value="De 40 a 45">
+              <label for="De39a45" class="cus-form-label">De 40 a 45</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_one" id="De4549" name="question2" value="5" data-value="De 46-50">
+              <label for="De4549" class="cus-form-label">De 46-50</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_one" id="De50a59" name="question2" value="6" data-value="De 51 a 59">
+              <label for="De50a59" class="cus-form-label">De 51 a 59</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_one" id="De60a69" name="question2" value="7" data-value="De 60 a 69">
+              <label for="De60a69" class="cus-form-label">De 60 a 69</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_one" id="Másde69" name="question2" value="8" data-value="Más de 69">
+              <label for="Másde69" class="cus-form-label">Más de 69</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <button class="previous action-button-previous">Previous</button>
+          <button class="next action-button" disabled>Next</button>
+        </div>
+      </fieldset>
+      {% comment %} Question-3 {% endcomment %}
+      <fieldset class="fieldset-wrap">
+        <div class="quetion-answer-wrap">
+          <div class="title que3" data-question="3. ¿Qué tipo de piel crees que tienes? Ahora déjanos solo los rasgos generales, luego vamos a los detalles :)">
+            <h2><span>3.</span> ¿Qué tipo de piel crees que tienes? Ahora déjanos solo los rasgos generales,
+              luego vamos
+              a los detalles :)</h2>
+          </div>
+          <div class="option-select-wrap">
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_two" id="Secaomuyseca" name="question3" value="1" data-value="Seca o muy seca">
+              <label for="Secaomuyseca" class="cus-form-label">Seca o muy seca</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_two" id="Normal" name="question3" value="2" data-value="Normal a seca (tirante, siempre necesita crema tras la limpieza, se siente apagada al final del día)" >
+              <label for="Normal" class="cus-form-label">Normal a seca (tirante, siempre necesita crema tras la
+                limpieza, se siente apagada al final del día)</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_two" id="Mixta" name="question3" value="3" data-value="Mixta (más seca en mejillas y más grasa en frente y  nariz)">
+             
+              <label for="Mixta" class="cus-form-label">Mixta (más seca en mejillas y más grasa en frente y
+                nariz)</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_two" id="Mixtaagrasa" name="question3" value="4" data-value="Mixta a grasa (más grasa en frente y nariz, y por la tarde suele incrementar la sensación de grasa, poro visible)">
+              <label for="Mixtaagrasa" class="cus-form-label">Mixta a grasa (más grasa en frente y nariz, y por la tarde
+                suele incrementar la sensación de grasa, poro visible)</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_two" id="Grasaomuygrasa" name="question3" value="5" data-value="Grasa o muy grasa (brillos, imperfecciones y poro dilatado)">
+              <label for="Grasaomuygrasa" class="cus-form-label">Grasa o muy grasa (brillos, imperfecciones y poro
+                dilatado)</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_que_two" id="Nolotengoclaro" name="question3" value="6" data-value="No lo tengo claro">
+              <label for="Nolotengoclaro" class="cus-form-label">No lo tengo claro</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <button class="previous action-button-previous">Previous</button>
+          <button class="next action-button" disabled>Next</button>
+        </div>
+      </fieldset>
+      {% comment %} Question-4 {% endcomment %}
+      <fieldset class="fieldset-wrap">
+        <div class="quetion-answer-wrap">
+          <div class="title que4" data-question="4. ¿Crees que tienes la piel sensible? Por ejemplo, se irrita a menudo cuando pruebas nuevos productos, no toleras bien cualquier cosa, se quema con facilidad…">
+            <h2><span>4.</span> ¿Crees que tienes la piel sensible? Por ejemplo, se irrita a menudo cuando
+              pruebas
+              nuevos productos, no toleras bien cualquier cosa, se quema con facilidad…</h2>
+          </div>
+          <div class="option-select-wrap">
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_yes js_que_three" id="yes" name="question4" value="1" data-value="Yes">
+              <label for="yes" class="cus-form-label">Yes</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_no js_que_three" id="no" name="question4" value="2" data-value="No">
+              <label for="no" class="cus-form-label">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <button class="previous action-button-previous">Previous</button>
+          <button class="next action-button" disabled>Next</button>
+        </div>
+      </fieldset>
+      {% comment %} Question-5 {% endcomment %}
+      <fieldset class="fieldset-wrap">
+        <div class="quetion-answer-wrap">
+          <div class="title que5" data-question="5. ¿Qué es lo que más te gustaría mejorar? Puedes elegir hasta dos">
+            <h2><span>5.</span> ¿Qué es lo que más te gustaría mejorar? Puedes elegir hasta dos </h2>
+          </div>
+          <div class="option-select-wrap">
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quefive js_quefour" id="Reducirarrugasy/omejorarflacidez"
+                name="question5[]" value="1" data-value="Reducir arrugas y/o mejorar  flacidez">
+               
+              <label for="Reducirarrugasy/omejorarflacidez" class="cus-form-label">Reducir arrugas y/o mejorar
+                flacidez</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quefive js_quefour" id="Hidratarlapiel" name="question5[]"
+                value="2" data-value="Hidratar la piel">
+              <label for="Hidratarlapiel" class="cus-form-label js_quefive">Hidratar la piel</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quefive js_quefour" id="Mejorarlaluminosidad" name="question5[]"
+                value="3" data-value="Mejorar la luminosidad">
+              <label for="Mejorarlaluminosidad" class="cus-form-label">Mejorar la luminosidad</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quefive js_quefour" id="Mejorarmanchastipomelasmaomarcasdeacné"
+                name="question5[]" value="4" data-value="Mejorar manchas tipo melasma o marcas de acné">
+                
+              <label for="Mejorarmanchastipomelasmaomarcasdeacné" class="cus-form-label">Mejorar manchas tipo melasma o
+                marcas de acné</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quefive js_quefour" id="Controlargranitos" name="question5[]"
+                value="5" data-value="Controlar granitos">
+              <label for="Controlargranitos" class="cus-form-label">Controlar granitos</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quefive js_quefour" id="Mejoraraparienciaporos" name="question5[]"
+                value="6" data-value="Mejorar apariencia poros">
+              <label for="Mejoraraparienciaporos" class="cus-form-label">Mejorar apariencia poros</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quefive js_quefour" id="Rosácea" name="question5[]" value="7" data-value="Rosácea">
+              <label for="Rosácea" class="cus-form-label">Rosácea</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <button class="previous action-button-previous">Previous</button>
+          <button class="next action-button" disabled>Next</button>
+        </div>
+      </fieldset>
+      {% comment %} Question-6 {% endcomment %}
+      <fieldset class="fieldset-wrap">
+        <div class="quetion-answer-wrap">
+          <div class="title que6" data-question="6. Hablemos de tu contorno de ojos ;) ¿Qué te gustaría tratar? Puedes elegir hasta dos">
+            <h2><span>6.</span> Hablemos de tu contorno de ojos ;) ¿Qué te gustaría tratar? Puedes elegir
+              hasta dos</h2>
+          </div>
+          <div class="option-select-wrap">
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quesix" id="Bolsasyojeras" name="question6[]" value="1" data-value="Bolsas y ojeras">
+              <label for="Bolsasyojeras" class="cus-form-label">Bolsas y ojeras</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quesix" id="Arrugasyfinaslíneasdeexpresión,patasdegallo"
+                name="question6[]" value="2" data-value="Arrugas y finas líneas de expresión, patas de gallo">
+                
+              <label for="Arrugasyfinaslíneasdeexpresión,patasdegallo" class="cus-form-label">Arrugas y finas líneas de
+                expresión, patas de gallo</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quesix" id="Deshidratación" name="question6[]"
+                value="3" data-value="Deshidratación">
+              <label for="Deshidratación" class="cus-form-label">Deshidratación</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="checkbox" class="cus-form-control js_quesix" id="Nomepreocupaporahora" name="question6[]"
+                value="4" data-value="No me preocupa por ahora">
+              <label for="Nomepreocupaporahora" class="cus-form-label">No me preocupa por ahora</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <button class="previous action-button-previous">Previous</button>
+          <button class="next action-button" disabled>Next</button>
+        </div>
+      </fieldset>
+      {% comment %} Question-7 {% endcomment %}
+      <fieldset class="fieldset-wrap">
+        <div class="quetion-answer-wrap">
+          <div class="title que7" data-question="7. Te gustaría tener una rutina rápida y básica (3 productos) o más completa y efectiva (4-6 productos)?">
+            <h2><span>7.</span> Te gustaría tener una rutina rápida y básica (3 productos) o más completa y
+              efectiva
+              (4-6 productos)?</h2>
+          </div>
+          <div class="option-select-wrap">
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_queseven" id="Básica" name="question7" value="1" data-value="Básica">
+              <label for="Básica" class="cus-form-label">Básica</label>
+            </div>
+            <div class="cus-form-group">
+              <input type="radio" class="cus-form-control js_queseven" id="Completa" name="question7" value="2" data-value="Completa">
+              <label for="Completa" class="cus-form-label">Completa</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <button class="previous action-button-previous">Previous</button>
+          <button class="next action-button submit-answers" disabled>Submit</button>
+        </div>
+      </fieldset>
+      <div class="fieldset-wrap">
+        <span class="customer_name" style="display:none;"><span class='name'>()</span>, ÉSTA ES TU RUTINA
+          PERSONALIZADA
+          :)</span>
+        <div class="routine-finder-product-wraper">
+          {% assign product1 = section.settings.product1 %}
+          {% assign product2 = section.settings.product2 %}
+          {% assign product3 = section.settings.product3 %}
+          {% assign product4 = section.settings.product4 %}
+          {% assign product5 = section.settings.product5 %}
+          {% assign product6 = section.settings.product6 %}
+          {% assign product7 = section.settings.product7 %}
+          {% assign product8 = section.settings.product8 %}
+          {% assign product9 = section.settings.product9 %}
+          <span class="js_basic">
+            <div class="box js-product"
+              data-product-var-id-basic="{{ product1.selected_or_first_available_variant.id }}" style="display:none">
+              Paso 1. Limpieza
+              <figure>
+                <a href="{{ product1.url }}">
+                  <img src="{{ product1.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product1.url }}">{{ product1.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product.selected_or_first_available_variant.compare_at_price >
+                product1.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product1.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product1.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product1.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product1.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+
+
+            <div class="box js-product"
+              data-product-var-id-basic="{{ product3.selected_or_first_available_variant.id }}" style="display:none">
+              Paso 2. Tratamiento
+
+              <figure>
+                <a href="{{ product3.url }}">
+                  <img src="{{ product3.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product3.url }}">{{ product3.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product3.selected_or_first_available_variant.compare_at_price >
+                product3.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product3.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product3.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product3.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product3.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product3.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+
+            <div class="box js-product"
+              data-product-var-id-basic="{{ product4.selected_or_first_available_variant.id }}" style="display:none">
+
+              Paso 2. Tratamiento
+
+              <figure>
+                <a href="{{ product4.url }}">
+                  <img src="{{ product4.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product4.url }}">{{ product4.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product4.selected_or_first_available_variant.compare_at_price >
+                product4.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product4.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product4.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product4.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product4.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product4.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+            <div class="box js-product"
+              data-product-var-id-basic="{{ product9.selected_or_first_available_variant.id }}" style="display:none">
+              Paso 2. Tratamiento
+              <figure>
+                <a href="{{ product9.url }}">
+                  <img src="{{ product9.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product9.url }}">{{ product9.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product9.selected_or_first_available_variant.compare_at_price >
+                product9.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product9.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product9.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product9.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product9.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product9.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+            <div class="box js-product"
+              data-product-var-id-basic="{{ product5.selected_or_first_available_variant.id }}" style="display:none">
+              <span class="basic_steps">
+                {% if forloop.index == 1 %}
+                Paso 1. Limpieza
+                {% elsif forloop.index == 2 %}
+                Paso 2. Tratamiento
+                {% elsif forloop.index == 3 %}
+                Paso 2. Tratamiento
+                {% elsif forloop.index == 4 %}
+                Paso 2. Tratamiento
+                {% elsif forloop.index == 5 %}
+                Paso 3. Hidratación
+                {% elsif forloop.index == 6 %}
+                Paso 3. Hidratación
+
+                {% endif %}
+                {{ forloop.index }}
+              </span>
+              Paso 2. Tratamiento
+              <figure>
+                <a href="{{ product5.url }}">
+                  <img src="{{ product5.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product5.url }}">{{ product5.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product5.selected_or_first_available_variant.compare_at_price >
+                product5.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product5.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product5.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product5.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product5.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product5.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+            <div class="box js-product"
+              data-product-var-id-basic="{{ product6.selected_or_first_available_variant.id }}" style="display:none">
+              <span class="basic_steps">
+                {% if forloop.index == 1 %}
+                Paso 1. Limpieza
+                {% elsif forloop.index == 2 %}
+                Paso 2. Tratamiento
+                {% elsif forloop.index == 3 %}
+                Paso 2. Tratamiento
+                {% elsif forloop.index == 4 %}
+                Paso 2. Tratamiento
+                {% elsif forloop.index == 5 %}
+                Paso 3. Hidratación
+                {% elsif forloop.index == 6 %}
+                Paso 3. Hidratación
+
+                {% endif %}
+                {{ forloop.index }}
+              </span>
+              Paso 3. Hidratación
+              <figure>
+                <a href="{{ product6.url }}">
+                  <img src="{{ product6.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product6.url }}">{{ product6.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product6.selected_or_first_available_variant.compare_at_price >
+                product6.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product6.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product6.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product6.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product6.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product6.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+            <div class="box js-product"
+              data-product-var-id-basic="{{ product7.selected_or_first_available_variant.id }}" style="display:none">
+              Paso 3. Hidratación
+              <figure>
+                <a href="{{ product7.url }}">
+                  <img src="{{ product7.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product7.url }}">{{ product7.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product7.selected_or_first_available_variant.compare_at_price >
+                product7.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product7.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product7.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product7.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product7.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product7.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+
+
+          </span>
+
+
+
+
+          <span class="js_complete">
+
+            <div class="box js-product" data-product-var-id="{{ product2.selected_or_first_available_variant.id }}"
+              style="display:none">
+              <span class="basic_steps">
+                Paso 1. Doble limpieza
+                <figure>
+                  <a href="{{ product2.url }}">
+                    <img src="{{ product2.featured_image | img_url : 'master' }}" alt="">
+                  </a>
+                </figure>
+                <h6 class="routine-finder-title">
+                  <a href="{{ product2.url }}">{{ product2.title }}</a>
+                </h6>
+                <span class="product-price">
+                  {% if product2.selected_or_first_available_variant.compare_at_price >
+                  product2.selected_or_first_available_variant.price %}
+                  <del>
+                    {{ product2.selected_or_first_available_variant.compare_at_price | money }}</del>
+                  {% endif %}
+                  {{ product2.selected_or_first_available_variant.price | money }}
+                </span>
+                <select name="id"
+                  class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                  id="cart_select">
+
+                  {% for variant in product2.variants %}
+                  {% if variant.compare_at_price > variant.price %}
+                  {% assign discount = 0 %}
+                  {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                  {% assign discount = discount | times: 100 %}
+                  {% assign discount = discount | divided_by: variant.compare_at_price %}
+                  {% endif %}
+                  <option value="{{variant.id}}" {% if variant.id==product2.selected_or_first_available_variant.id %}
+                    selected {% endif %} data-price="{{ variant.price }}"
+                    data-compare_at_price="{{ variant.compare_at_price }}"
+                    data-image="{{ variant.img | img_url : 'master' }}" data-available="{{ variant.available }}"
+                    data-option1value="{{ variant.option1 | escape }}"
+                    data-option2value="{{ variant.option2 | escape }}"
+                    data-option3value="{{ variant.option3 | escape }}" data-discount="{{ discount }}">
+                    {{ variant.title }}</option>
+                  {% endfor %}
+                </select>
+                <a href="javascript:void(0)"
+                  class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                  data-var-id="{{  product2.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+              </span>
+            </div>
+
+            <div class="box js-product" data-product-var-id="{{ product1.selected_or_first_available_variant.id }}"
+              style="display:none">
+              Paso 2. Limpieza
+              <figure>
+                <a href="{{ product1.url }}">
+                  <img src="{{ product1.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product1.url }}">{{ product1.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product.selected_or_first_available_variant.compare_at_price >
+                product1.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product1.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product1.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product1.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product1.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+
+
+
+            <div class="box js-product" data-product-var-id="{{ product8.selected_or_first_available_variant.id }}"
+              style="display:none">
+              Paso 3. Contorno de ojos
+
+              <figure>
+                <a href="{{ product8.url }}">
+                  <img src="{{ product8.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product8.url }}">{{ product8.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product8.selected_or_first_available_variant.compare_at_price >
+                product8.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product8.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product8.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product8.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product8.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product8.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+            <div class="box js-product" data-product-var-id="{{ product5.selected_or_first_available_variant.id }}"
+              style="display:none">
+              <span class="js_pro5_step3">
+                Paso 3. Loción exfoliante
+              </span>
+              <span class="js_pro5_step4" style='display:none'>
+                Paso 4. Tratamiento
+              </span>
+
+
+              <figure>
+                <a href="{{ product5.url }}">
+                  <img src="{{ product5.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product5.url }}">{{ product5.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product5.selected_or_first_available_variant.compare_at_price >
+                product5.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product5.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product5.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product5.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product5.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product5.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+            <div class="box js-product" data-product-var-id="{{ product3.selected_or_first_available_variant.id }}"
+              style="display:none">
+              Paso 4. Tratamiento
+
+              <figure>
+                <a href="{{ product3.url }}">
+                  <img src="{{ product3.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product3.url }}">{{ product3.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product3.selected_or_first_available_variant.compare_at_price >
+                product3.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product3.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product3.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product3.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product3.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product3.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+
+            <div class="box js-product" data-product-var-id="{{ product4.selected_or_first_available_variant.id }}"
+              style="display:none">
+              Paso 4. Tratamiento
+              <figure>
+                <a href="{{ product4.url }}">
+                  <img src="{{ product4.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product4.url }}">{{ product4.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product4.selected_or_first_available_variant.compare_at_price >
+                product4.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product4.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product4.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product4.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product4.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product4.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+            <div class="box js-product" data-product-var-id="{{ product9.selected_or_first_available_variant.id }}"
+              style="display:none">
+              Paso 4. Tratamiento
+              <figure>
+                <a href="{{ product9.url }}">
+                  <img src="{{ product9.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product9.url }}">{{ product9.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product9.selected_or_first_available_variant.compare_at_price >
+                product9.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product9.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product9.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product9.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product9.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product9.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+            </div>
+
+            <div class="box js-product" data-product-var-id="{{ product6.selected_or_first_available_variant.id }}"
+              style="display:none">
+
+              <span class="js_pro6_step4">
+                Paso 4. Tratamiento
+              </span>
+              <span class="js_pro6_step5" style='display:none'>
+                Paso 5. Hidratación
+              </span>
+              <figure>
+                <a href="{{ product6.url }}">
+                  <img src="{{ product6.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product6.url }}">{{ product6.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product6.selected_or_first_available_variant.compare_at_price >
+                product6.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product6.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product6.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product6.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product6.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product6.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+            <div class="box js-product" data-product-var-id="{{ product7.selected_or_first_available_variant.id }}"
+              style="display:none">
+
+              <span class="js_pro6_step4">
+                Paso 4. Tratamiento
+              </span>
+              <span class="js_pro6_step5" style='display:none'>
+                Paso 5. Hidratación
+              </span>
+
+              <figure>
+                <a href="{{ product7.url }}">
+                  <img src="{{ product7.featured_image | img_url : 'master' }}" alt="">
+                </a>
+              </figure>
+              <h6 class="routine-finder-title">
+                <a href="{{ product7.url }}">{{ product7.title }}</a>
+              </h6>
+              <span class="product-price">
+                {% if product7.selected_or_first_available_variant.compare_at_price >
+                product7.selected_or_first_available_variant.price %}
+                <del>
+                  {{ product7.selected_or_first_available_variant.compare_at_price | money }}</del>
+                {% endif %}
+                {{ product7.selected_or_first_available_variant.price | money }}
+              </span>
+              <select name="id"
+                class="js-variant-selector product-variants form-control product-form__variants no-js op1"
+                id="cart_select">
+
+                {% for variant in product7.variants %}
+                {% if variant.compare_at_price > variant.price %}
+                {% assign discount = 0 %}
+                {% assign discount = variant.compare_at_price | minus: variant.price %}
+
+                {% assign discount = discount | times: 100 %}
+                {% assign discount = discount | divided_by: variant.compare_at_price %}
+                {% endif %}
+                <option value="{{variant.id}}" {% if variant.id==product7.selected_or_first_available_variant.id %}
+                  selected {% endif %} data-price="{{variant.price}}"
+                  data-compare_at_price="{{variant.compare_at_price}}"
+                  data-image="{{variant.img | img_url : 'master' }}" data-available="{{variant.available}}"
+                  data-option1value="{{variant.option1 | escape}}" data-option2value="{{variant.option2 | escape}}"
+                  data-option3value="{{variant.option3 | escape}}" data-discount="{{discount}}">
+                  {{ variant.title }}</option>
+                {% endfor %}
+              </select>
+              <a href="javascript:void(0)"
+                class="but-quize js-product-atc btn-add-to-cart Button Button--primary routine-product-atc"
+                data-var-id="{{  product7.selected_or_first_available_variant.id }}">Añadir al carrito</a>
+
+            </div>
+
+          </span>
+
+        </div>
+        <div class="button-wrap js_final_button" style="display:none">
+          <button class="previous action-button-previous" id="final-back-btn">Volver atrás</button>
+          <button class="js_addtobundle">Añadir al carrito</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name":"EQ Routine Finder",
+  "settings":[
+     {
+        "type":"product",
+        "id":"product1",
+        "label":"Product 1"
+     },
+     {
+        "type":"product",
+        "id":"product2",
+        "label":"Product 2"
+     },
+     {
+        "type":"product",
+        "id":"product3",
+        "label":"Product 3"
+     },
+     {
+        "type":"product",
+        "id":"product4",
+        "label":"Product 4"
+     },
+     {
+        "type":"product",
+        "id":"product5",
+        "label":"Product 5"
+     },
+     {
+        "type":"product",
+        "id":"product6",
+        "label":"Product 6"
+     },
+     {
+        "type":"product",
+        "id":"product7",
+        "label":"Product 7"
+     },
+     {
+        "type":"product",
+        "id":"product8",
+        "label":"Product 8"
+     },
+     {
+        "type":"product",
+        "id":"product9",
+        "label":"Product 9"
+     }
+  ],
+  "presets":[
+     {
+        "name":"Routine Finder"
+     }
+  ],
+  "blocks":[
+     {
+        "type":"product-block",
+        "name":"Quiz Product",
+        "settings":[
+           {
+              "type":"product",
+              "id":"select_prodcut",
+              "label":"Quiz Prodcut"
+           }
+        ]
+     },
+     {
+        "type":"complete-product-block",
+        "name":"Complete Routin",
+        "settings":[
+           {
+              "type":"product",
+              "id":"select_prodcut",
+              "label":"Quiz Prodcut"
+           }
+        ]
+     }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

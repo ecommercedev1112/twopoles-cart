@@ -1,0 +1,146 @@
+{% style %}
+  .main-style {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+  .product-stock-with-sold {
+    display: flex;
+    gap: 20px;
+    height: 29px;
+    font-family: var(--heading-font-family);
+    font-size: 13px;
+  }
+  .p-0 {
+    padding: 0;
+  }
+ 
+  .show-count {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 5px;
+  }
+ 
+  
+  
+{% endstyle %}
+
+
+{%- if section.settings.enable_bar -%}
+  {%- unless section.settings.home_page_only and template != 'index' -%}
+    <section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="announcement-bar">
+      {% comment %} <div class="show-count">
+        {% for product in collections.all.products %}
+          {%- if product.metafields.custom.special_count == true -%}
+            <span class="product-title">{{ product.title }}</span>
+            <span class="product-count"> {{ product.selected_or_first_available_variant.inventory_quantity }} Available</span>
+            <span class="product-sold">/</span> 
+
+            {% assign sold_out_count = 0 %}
+            {% assign is_product_sold_out = true %}
+
+            {% for variant in product.variants %}
+              {% if variant.inventory_quantity > 0 %}
+                {% assign is_product_sold_out = false %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+
+            {% if is_product_sold_out %}
+              {% assign sold_out_count = sold_out_count | plus: 1 %}
+            {% endif %}
+
+            <span class="product-sold">{{ sold_out_count }} sold</span> 
+
+          {%- endif -%}
+        {% endfor %}
+      </div> {% endcomment %}
+      <div class="AnnouncementBar sold-out-titel__align">
+        <div class="AnnouncementBar__Wrapper main-style p-0">
+          <p class="AnnouncementBar__Content Heading">{{ product.title }}</p>
+
+          <div class="product-stock-with-sold">
+            {% assign current_variant = product.selected_or_first_available_variant %}
+              <div class="inventoryNote form__label">
+              {% if current_variant.available %}
+                {{ current_variant.inventory_quantity }}
+                <span class="text-stock">stock</span>
+              {% endif %}
+            </div> 
+          
+            <div id="neon-stock-info-widget" data-product-id="{{ product.id }}" 
+              data-product-tracking="
+              {% for variant in product.variants %}
+              {% if variant.inventory_management == nil or variant.inventory_policy == "continue"%}
+                {{ false }}{% break %}
+                {% elsif forloop.last == true %}{{ true }}{% endif %}
+              {% endfor %}" data-product-stock="{{ product.variants | map: 'inventory_quantity' | join: ',' }}">
+            </div>            
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
+
+    <style>
+      #section-{{ section.id }} {
+        background: {{ section.settings.background }};
+        color: {{ section.settings.text_color }};
+      }
+    </style>
+
+    <script>
+      document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-announcement').offsetHeight + 'px');
+    </script>
+  {%- endunless -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Sold out",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_bar",
+      "label": "Enable bar",
+      "default": true
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "product"
+    },
+    {
+      "type": "checkbox",
+      "id": "home_page_only",
+      "label": "Home page only",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ]
+}
+{% endschema %}

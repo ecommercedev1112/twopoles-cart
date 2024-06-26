@@ -1,0 +1,61 @@
+<section class="two-col-section">
+    <div class="c-container">
+        <div class="two-col-section__wrap">
+            {% for block in section.blocks %}
+            <div class="box">
+                {% if block.settings.image != blank %}
+                <figure>
+                    <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+                </figure>
+                {% endif %}
+                <h4>{{block.settings.heading}}</h4>
+                <p>{{block.settings.text}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name":"EQ Product Features",
+    "settings":[
+       
+    ],
+    "presets":[
+       {
+          "name":"EQ Sustainability Features"
+       }
+    ],
+    "blocks":[
+       {
+          "type":"features",
+          "name":"Features",
+          "settings":[
+             {
+                "type":"image_picker",
+                "id":"image",
+                "label":"Image"
+             },
+             {
+                "type":"textarea",
+                "id":"heading",
+                "label":"Heading"
+             },
+             {
+                "type":"textarea",
+                "id":"text",
+                "label":"Text"
+             }
+          ]
+       }
+    ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

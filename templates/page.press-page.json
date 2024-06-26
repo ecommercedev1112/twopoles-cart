@@ -1,0 +1,105 @@
+{
+  "sections": {
+    "pf-1d8f01ae": {
+      "type": "pf-1d8f01ae",
+      "disabled": true,
+      "settings": {}
+    },
+    "bfbb5a61-5f49-4922-9a39-315e4894bfba": {
+      "type": "press-page",
+      "blocks": {
+        "25327907-d675-4b5d-b038-4b80afef066e": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.vogue.es\/belleza\/articulos\/mejor-serum-retinol-bakuchiol-acne-granos-piel-grasa-poros-abiertos-two-poles",
+            "press_image": "shopify:\/\/shop_images\/01.jpg",
+            "image_title": "VOGUE"
+          }
+        },
+        "c8506739-f9b0-40d9-95eb-0dbdfe15cd87": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.glamour.es\/articulos\/crema-hidratante-niacinamida-two-poles",
+            "press_image": "shopify:\/\/shop_images\/02.jpg",
+            "image_title": "GLAMOUR"
+          }
+        },
+        "3bd1a7f6-5080-4671-90ce-c210a31508fb": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.mujerhoy.com\/belleza\/tratamientos\/serum-made-spain-dia-manana-vitamina-c-elimina-arrugas-luminosidad-hidrata-20220710145110-nt.html",
+            "press_image": "shopify:\/\/shop_images\/03.jpg",
+            "image_title": "mujerhoy"
+          }
+        },
+        "7682d6c7-b3dd-4918-9bd0-4b477d7a8f75": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.mujerhoy.com\/belleza\/tratamientos\/serum-noche-made-in-spain-retinol-encapsulado-bakuchiol-activos-antiedad-eficaces-arrugas-reafirmantes-ovalo-facial-20220412134228-nt.html",
+            "press_image": "shopify:\/\/shop_images\/04.jpg",
+            "image_title": "mujerhoy"
+          }
+        },
+        "c4de2122-cfc9-4241-b660-60b87520a543": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.mujerhoy.com\/belleza\/tratamientos\/serum-acido-azelaico-despigmentante-manchas-piel-cuidado-rostro-20220912142807-nt.html",
+            "press_image": "shopify:\/\/shop_images\/05.jpg",
+            "image_title": "mujerhoy"
+          }
+        },
+        "c94cb6a9-311d-4b76-8a21-4b545cfb5322": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.vogue.es\/belleza\/articulos\/nuevas-marcas-cosmetica-natural-sostenible-cremas-cara-cuerpo-depilacion",
+            "press_image": "shopify:\/\/shop_images\/06.jpg",
+            "image_title": "VOGUE"
+          }
+        },
+        "854803bc-f7f5-4ec5-831c-cdc8db3d4b6c": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.elle.com\/es\/belleza\/cara-cuerpo\/g41032024\/desmaquillantes-waterproof-como-retirar-maquillaje-resistente-agua\/",
+            "press_image": "shopify:\/\/shop_images\/07.jpg",
+            "image_title": "ELLE"
+          }
+        },
+        "bb9401dd-68e9-40f6-a9b3-97e33e5699a2": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.glamour.es\/belleza\/tratamientos\/galerias\/serum-retinol-mejores\/15733",
+            "press_image": "shopify:\/\/shop_images\/08.jpg",
+            "image_title": "GLAMOUR"
+          }
+        },
+        "d9ecff05-2956-4ebd-9858-dbb7bf06b524": {
+          "type": "press-block",
+          "settings": {
+            "image_link": "https:\/\/www.instyle.es\/belleza\/acido-hialuronico-con-que-puedes-mezclar-y-que-no-con-este-activo-hidratante-que-ademas-quita-anos_58495",
+            "press_image": "shopify:\/\/shop_images\/09.jpg",
+            "image_title": "INSTYLE"
+          }
+        }
+      },
+      "block_order": [
+        "25327907-d675-4b5d-b038-4b80afef066e",
+        "c8506739-f9b0-40d9-95eb-0dbdfe15cd87",
+        "3bd1a7f6-5080-4671-90ce-c210a31508fb",
+        "7682d6c7-b3dd-4918-9bd0-4b477d7a8f75",
+        "c4de2122-cfc9-4241-b660-60b87520a543",
+        "c94cb6a9-311d-4b76-8a21-4b545cfb5322",
+        "854803bc-f7f5-4ec5-831c-cdc8db3d4b6c",
+        "bb9401dd-68e9-40f6-a9b3-97e33e5699a2",
+        "d9ecff05-2956-4ebd-9858-dbb7bf06b524"
+      ],
+      "settings": {
+        "heading": "in the press",
+        "sub_heading": "Cotillea un poco qué dicen de nosotras"
+      }
+    }
+  },
+  "order": [
+    "pf-1d8f01ae",
+    "bfbb5a61-5f49-4922-9a39-315e4894bfba"
+  ]
+}

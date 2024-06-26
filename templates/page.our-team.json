@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "our-team": {
+      "type": "our-team",
+      "blocks": {
+        "f3b6213c-ae0e-4223-93eb-04f614752c67": {
+          "type": "our-team-block",
+          "settings": {
+            "image_link": "shopify:\/\/pages\/ccpa-compliance",
+            "our_team_image": "shopify:\/\/shop_images\/foto_anna.png",
+            "image_title": "ANNA FUSTER",
+            "image_content1": "<p>Grado y MBA en Esade Business School (Barcelona), Máster en Finanzas y emprendimiento en Brandeis (Boston, MA), Máster en comunicación digital y redes sociales, Máster en Dermofarmacia y Formulación Cosmética.<\/p>",
+            "image_content2": "<p>Skincare Coach y fundadora de Two Poles y la cuenta @partners.incream, que cuenta con más de 88k seguidores.<\/p>",
+            "hover_title1": "ANNA FUSTER",
+            "hover_title2": "Founder & CEO"
+          }
+        },
+        "b96928eb-ead2-44c1-8c7e-243d9f929a72": {
+          "type": "our-team-block",
+          "settings": {
+            "image_link": "",
+            "our_team_image": "shopify:\/\/shop_images\/image00001.jpg",
+            "image_title": "CARLA PAGAN",
+            "image_content1": "<p>Licenciada en Educacion Social, Máster en Marketing Digital<br><br>\nGestiona vuestros pedidos y os atiende si tenéis dudas o incidencias. También lleva Atención al\/la clientx para cualquier duda que os pueda surgir.<\/p>",
+            "image_content2": "<p>Lleva en Two Poles desde antes de que saliera a la luz y es una pieza clave para que todo funcione a la perfección como un reloj suizo. Además, puedes darle a ella las gracias por la Cleansing Cream. Ella nos animó a sacarla al mercado cuando nos entraron las dudas. al principio<\/p>",
+            "hover_title1": "CARLA PAGÁN",
+            "hover_title2": "Customer & Operations Manager"
+          }
+        },
+        "07c5fd5c-4b21-4bdb-a708-df30283fcad5": {
+          "type": "our-team-block",
+          "settings": {
+            "image_link": "",
+            "our_team_image": "shopify:\/\/shop_images\/UNADJUSTEDNONRAW_thumb_2ce6.jpg",
+            "image_title": "Marta Santos",
+            "image_content1": "<p>Licenciada en Publicidad y RRPP, Máster en Comunicación Corporativa.<br><br>\nY tras varios años dedicada al sector, especializada en cosmética. Marta se encarga de las redes sociales, comunicación y marketing. Además, te recomendará la mejor rutina Two Poles para tu piel a través de Whatsapp o email. ¡Pruébalo!\n<\/p>",
+            "image_content2": "<p>También gestiona las relaciones públicas y prensa, medios e influencer marketing.<br><br>\nEs clave para explicar bien nuestra marca y valores y dar a conocer Two Poles a todo el mundo.\n<\/p>",
+            "hover_title1": "Marta Santos",
+            "hover_title2": "Communication & Social Media Manager"
+          }
+        },
+        "6220d7e5-3db4-4317-bfdd-7a3789bc1b24": {
+          "type": "our-team-block",
+          "settings": {
+            "image_link": "",
+            "our_team_image": "shopify:\/\/shop_images\/two-polse-img1.jpg",
+            "image_title": "YAIZA BOUZAS",
+            "image_content1": "<p>Licenciada en Farmacia, Máster en Dermofarmacia y en Nutrición.<\/p>",
+            "image_content2": "<p>Es nuestra Directora de Formación y se encarga de mantener al día y explicar los lanzamientos en punto de venta, para que no nos falte ni un detalle y entendamos a la perfección cada producto y rutina. Aunque es basca, en sus ratos libres se escapa a la playa para desconectar y disfrutar de la calma de la terreta.<\/p>",
+            "hover_title1": "YAIZA BOUZAS",
+            "hover_title2": "Training Manager"
+          }
+        },
+        "abc3cb2d-9864-4d7e-b977-9c3145b3713d": {
+          "type": "our-team-block",
+          "settings": {
+            "image_link": "",
+            "our_team_image": "shopify:\/\/shop_images\/twopuls-team-member.png",
+            "image_title": "ALBA TERAN",
+            "image_content1": "<p>Licenciada en Derecho con Máster en Marketing Digital.<\/p>",
+            "image_content2": "<p>En Two Poles se encarga de dirigir y coordinar diferentes proyectos de Marketing para poder hacer crecer la marca al máximo y llegar a más gente.<\/p>\n<p>Está pensando todo el día diferentes campañas de marketing y le encanta el mundo de las startups.<\/p>",
+            "hover_title1": "ALBA TERÁN",
+            "hover_title2": "MARKETING MANAGER"
+          }
+        }
+      },
+      "block_order": [
+        "f3b6213c-ae0e-4223-93eb-04f614752c67",
+        "b96928eb-ead2-44c1-8c7e-243d9f929a72",
+        "07c5fd5c-4b21-4bdb-a708-df30283fcad5",
+        "6220d7e5-3db4-4317-bfdd-7a3789bc1b24",
+        "abc3cb2d-9864-4d7e-b977-9c3145b3713d"
+      ],
+      "settings": {
+        "heading": "meet the team"
+      }
+    }
+  },
+  "order": [
+    "our-team"
+  ]
+}

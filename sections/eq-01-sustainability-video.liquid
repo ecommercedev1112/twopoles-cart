@@ -1,0 +1,95 @@
+<section class="eq-sustainability-banner">
+    <div class="eq-sustainability-banner__wrap">
+        <div class="c-container">
+            <div class="eq-sustainability-banner__content-wrap">
+                <div class="eq-sustainability-banner__text-content">
+                    <h1>{{section.settings.heading}}</h1>
+                    <h6>{{section.settings.subheading}}</h6>
+                    <p>{{section.settings.text}}</p>
+                </div>
+                <div class="eq-sustainability-banner__image-content">
+                    <div class="eq-sustainability-banner__video-wrap">
+                        {% if section.settings.video_url != blank %}
+                        <video width="100%" height="100%" muted="" playsinline="" loop="" autoplay="" class="sustainability-video play">
+                            <source src="{{ section.settings.video_url  }}" type="video/mp4">
+                        </video>
+                        <div class="icon-play-pause-btn">
+                            <a href="javascript:void(0)" class="icon-play">
+                                <img src="{{ 'icon-video-play.png' | file_img_url: 'master' }}" alt="">
+                            </a>
+                            <a href="javascript:void(0)" class="icon-pause">
+                                <img src="{{ 'video-pause.png' | file_img_url: 'master' }}" alt="">
+                            </a>
+                        </div>
+                        {% endif %}    
+                    </div>
+                    <div class="eq-sustainability-banner__image-wrap">
+                        {% if section.settings.image1 != blank %}
+                        <figure class="first-image">
+                            <img src="{{ section.settings.image1 | img_url: 'master' }}" alt="">
+                        </figure>
+                        {% endif %}
+                        {% if section.settings.image2 != blank %}
+                        <figure class="second-image">
+                            <img src="{{ section.settings.image2 | img_url: 'master' }}" alt="">
+                        </figure>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name":"EQ Sustainability Video",
+    "settings":[
+       {
+          "type":"textarea",
+          "id":"heading",
+          "label":"Heading",
+          "default":"Sostenibilidad"
+       },
+       {
+        "type":"textarea",
+        "id":"subheading",
+        "label":"Subheading",
+        "default":"LA SOSTENIBILIDAD, NUESTRO MANTRA"
+       },
+       {
+        "type":"textarea",
+        "id":"text",
+        "label":"Text",
+        "default":"Hemos dedicado mucho tiempo y esfuerzos en buscar soluciones y maneras de producir de forma sostenible. Tenemos claro que no es fácil pero también que es una filosofía de empresa que nos acompaña en todas las decisiones que tomamos."
+       },
+       {
+        "type": "url",
+        "id": "video_url",
+        "label": "Video URL"
+       },
+       {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "First Image"
+       },
+       {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "Second Image"
+       }
+    ],
+    "presets":[
+       {
+          "name":"EQ Sustainability Video"
+       }
+    ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

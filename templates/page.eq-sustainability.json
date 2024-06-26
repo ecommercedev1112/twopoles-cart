@@ -1,0 +1,105 @@
+{
+  "sections": {
+    "main": {
+      "type": "eq-sustainability-new",
+      "disabled": true,
+      "settings": {}
+    },
+    "8e012658-c52a-4f31-850a-eec41d4e5864": {
+      "type": "eq-01-sustainability-video",
+      "settings": {
+        "heading": "Sostenibilidad",
+        "subheading": "LA SOSTENIBILIDAD, NUESTRO MANTRA",
+        "text": "Hemos dedicado mucho tiempo y esfuerzos en buscar soluciones y maneras de producir de forma sostenible. Tenemos claro que no es fácil pero también que es una filosofía de empresa que nos acompaña en todas las decisiones que tomamos.",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0297c95b5a974097b582cc75c2643d38.mp4",
+        "image1": "shopify:\/\/shop_images\/sustainability-banner-img1.jpg",
+        "image2": "shopify:\/\/shop_images\/sustainability-banner-img2.jpg"
+      }
+    },
+    "c8f0d1fd-d752-492e-a560-dd24c322d72e": {
+      "type": "eq-02-sustainability-features",
+      "blocks": {
+        "fef02c5d-5d92-4c04-9b8a-80280d2512f0": {
+          "type": "features",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/two-col-img1.png",
+            "heading": "Apostamos por el km0",
+            "text": "Somos muy conscientes de que el transporte es uno de los principales responsables de la huella de carbono. Por eso buscamos proveedores que estén cerca de nuestro laboratorio en Barcelona."
+          }
+        },
+        "eb5e1436-31de-4523-88d7-497cf9b45335": {
+          "type": "features",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/two-col-img2.jpg",
+            "heading": "Skinmalism para reducir el consumo",
+            "text": "¿Una marca de cosmética diciendo que reduzcas cosméticos? Así es amigx. Apostamos por el minimalismo cosmético. Pocos productos pero muy buenos que puedan realizar varias funciones."
+          }
+        },
+        "91bcc180-8f70-4558-b883-9cbf679ca30f": {
+          "type": "features",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/two-col-img3.png",
+            "heading": "Ingredientes y proveedores seleccionados",
+            "text": "Sabemos que la sostenibilidad no acaba en nosotras. Sino que va más allá. En nuestros proveedores, en nuestros ingredientes. Nos aseguramos que todos tengamos la misma filosofía."
+          }
+        },
+        "179fded7-6aeb-41b0-8ec6-5befe46e3539": {
+          "type": "features",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/two-col-img4.jpg",
+            "heading": "Transparencia formativa",
+            "text": "Realizamos una labor formativa a través de @partners.incream y en @twopolescosmetics para que cada persona entienda y sepa lo que debe comprar. Para que solo compre lo que necesite. Y nada más."
+          }
+        }
+      },
+      "block_order": [
+        "fef02c5d-5d92-4c04-9b8a-80280d2512f0",
+        "eb5e1436-31de-4523-88d7-497cf9b45335",
+        "91bcc180-8f70-4558-b883-9cbf679ca30f",
+        "179fded7-6aeb-41b0-8ec6-5befe46e3539"
+      ],
+      "settings": {}
+    },
+    "83509fd7-c070-477d-a920-ea846bebd286": {
+      "type": "eq-03-sustainability-image-with-text",
+      "blocks": {
+        "1c58099d-990f-46a2-aa11-c70d5c02d292": {
+          "type": "image-with-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sustainability-banner-img1.jpg",
+            "heading": "MUCHO MÁS QUE ENVASES, UNA FILOSOFÍA",
+            "text": "<p>Nuestra cajas son 100% reciclables<\/p><p>Las que utilizamos para el envío están hechas con 70% de cartón reciclado y son 100% reciclables. La cobertura exterior es de kraft y proviene de bosques sostenibles. Disponen del certificado FSC y se fabrican cerca de la provincia de Barcelona, para limitar la huella de carbono del transporte y fomentar el trabajo local.<\/p><p>Nuestras cajas de envase, que únicamente utilizamos cuando es estrictamente necesario, están hechas con pasta química ECF y permiten su reciclabilidad al 100% hasta 5 veces.<\/p><p>Las realizamos en una fábrica de papel histórica de 1714 cerca de Barcelona (Capellades) y la empresa está certificada según normas ISO 9001 y ISO 14001.<\/p><p>Nuestros tubos están hechos con plástico reciclado y se fabrican en España, nunca usamos plástico de embalaje.<\/p><p>Con estas medidas, sabemos que estamos haciendo todo lo que está en nuestra mano, a día de hoy, para ser más sostenibles. Pero tenemos claro que hay que seguir caminando e ir más allá.<\/p><p><\/p>"
+          }
+        },
+        "20c561b2-ba90-4ca7-9633-7835deb174cb": {
+          "type": "video-with-text",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0297c95b5a974097b582cc75c2643d38.mp4",
+            "heading": "INGREDIENTES UP-CYCLING, QUE VAN MÁS ALLÁ",
+            "text": "<p>La sostenibilidad no solo está en los envases o los embalajes. En Two Poles, hemos querido dar un paso más allá y también tener presente el cuidado del medio ambiente en la fabricación de nuestros productos.<\/p><p>Para ello, contamos con ingredientes Up-cycling en algunos de nuestros productos como el Make-up Melting Cleansing Oil. Se trata de aceite proveniente de mermas de otras fabricaciones de altísima calidad, pero que no se puede reaprovechar para  el consumo alimentario. Aún así, sí es viable en cosmética ya que mantiene su alta calidad, y pasa por unos estrictos controles sanitarios y técnicos.<\/p><p>De esta forma, aprovechamos estas mermas evitando que se desperdicien en el medio ambiente, y evitando gastar más recursos para fabricar un aceite de oliva de nuevo para nuestro producto.<\/p><p>Así, el Cleasing Oil se convierte en nuestro producto más sostenible, pero también el más especial. Además de este ingrediente up-cycling, está hecho con aceite de oliva Virgen Extra procedente de los olivos de la família de Anna, nuestra fundadora, en Valencia.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1c58099d-990f-46a2-aa11-c70d5c02d292",
+        "20c561b2-ba90-4ca7-9633-7835deb174cb"
+      ],
+      "settings": {}
+    },
+    "698c63af-935c-474c-a3d6-295ddd5370f4": {
+      "type": "eq-04-sustainability-walking-towards",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/sustainability-img.jpg",
+        "heading": "Caminando hacia la sostenibilidad",
+        "text": "<p>Como en todo lo que hacemos queremos ser muy claras contigo: a día de hoy no somos 100 % sostenibles. Pero ponemos todo nuestro empeño en serlo. Nos mejoramos día a día, investigamos y planificamos para poder llegar allí.<\/p><p>Por eso, hemos trazado una ruta para los siguientes años para que, pasito a paso, los consigamos. Porque la sostenibilidad no es una meta, es un camino.<\/p><p><strong>¿Cuáles son nuestros objetivos?<\/strong><\/p><ul><li>En 2024 queremos incluir más ingredientes  up-cycling en nuestras fórmulas. Es decir, ingredientes que provienen de residuos y mermas de otras fabricaciones.<\/li><li>En 2028 queremos llegar a ser carbón neutral. Es decir, eliminar de la atmósfera tanto CO2 como el que emitimos. Sabemos que reducir la huella de carbono, no basta.<\/li><\/ul><p><\/p><p><\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8e012658-c52a-4f31-850a-eec41d4e5864",
+    "c8f0d1fd-d752-492e-a560-dd24c322d72e",
+    "83509fd7-c070-477d-a920-ea846bebd286",
+    "698c63af-935c-474c-a3d6-295ddd5370f4"
+  ]
+}

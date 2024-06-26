@@ -1,0 +1,77 @@
+<section class="walking-towards">
+    <div class="c-container">
+        <div class="walking-towards__wrap">
+            <div class="walking-towards__top-image">
+                {% if section.settings.image != blank %}
+                <figure>
+                    <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+                </figure>
+                {% endif %}
+            </div>
+            <div class="walking-towards__content">
+                <h2>{{section.settings.heading}}</h2>
+                {{section.settings.text}}
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name":"EQ Walking Towards",
+    "settings":[
+       {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+       },
+       {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Caminando hacia la sostenibilidad"
+       },
+       {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+       }
+    ],
+    "presets":[
+       {
+          "name":"EQ Sustainability Walking Towards"
+       }
+    ],
+    "blocks":[
+       {
+          "type":"features",
+          "name":"Features",
+          "settings":[
+             {
+                "type":"image_picker",
+                "id":"image",
+                "label":"Image"
+             },
+             {
+                "type":"textarea",
+                "id":"heading",
+                "label":"Heading"
+             },
+             {
+                "type":"textarea",
+                "id":"text",
+                "label":"Text"
+             }
+          ]
+       }
+    ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

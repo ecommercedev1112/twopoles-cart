@@ -1,0 +1,79 @@
+<section class="page-press">
+<div class="cus-container">
+    <div class="section-title">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.sub_heading }}</p>
+    </div>
+    <div class="section-content">
+        {% for block in section.blocks %}            
+        <div class="box">
+            {% if block.settings.press_image != blank %}
+            <a href="{{ block.settings.image_link }}" class="image-link">
+            <figure>
+                <img src="{{ block.settings.press_image |  img_url: '700x' }}" alt="">
+            </figure>
+            </a>
+        {% endif %}
+        {% if block.settings.image_title != blank %}
+            <h5>{{ block.settings.image_title }}</h5>
+        {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+</div>
+</section>
+
+{% schema %}
+{
+   "name":"EQ Press Page",
+   "settings":[
+      {
+         "type":"textarea",
+         "id":"heading",
+         "label":"Heading",
+         "default":"IN THE PRESS"
+      },
+      {
+         "type":"textarea",
+         "id":"sub_heading",
+         "label":"Sub Heading",
+         "default":"For all press enquiries including press releases, sample requests, <span>interviews and comments, please contact us:</span><span>PRESSTEAM@DRSTURM.COM</span>"
+      }
+   ],
+   "blocks":[
+      {
+         "type":"press-block",
+         "name":"Press Image Block",
+         "settings":[
+            {
+               "type":"url",
+               "id":"image_link",
+               "label":"Image Link"
+            },
+            {
+               "type":"image_picker",
+               "id":"press_image",
+               "label":"Press Image"
+            },
+            {
+               "type":"textarea",
+               "id":"image_title",
+               "label":"Image Title"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"EQ Press Page"
+      }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

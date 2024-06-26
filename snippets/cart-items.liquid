@@ -1,0 +1,314 @@
+{%- assign for_drawer = true -%}
+
+{%- if template == 'cart' or template == 'cart.ajax' -%}
+  {%- assign for_drawer = false -%}
+{%- endif -%}
+{% assign is_bundle_present = false %}
+
+{% for item in cart.items %}
+    {% if item.properties.Bundle != blank %}
+        {% assign is_bundle_present = true %}
+    {% endif %}
+{% endfor %}
+
+{% assign bundles_list = "" %}
+{% for item in cart.items %}  
+  {% for p in item.properties %}
+    {% if p.first contains '_bundle_time' %}      
+      {% if bundles_list != blank %}
+        {% assign bundles_list = bundles_list| append: "," | append: p.last %}
+      {% else %}
+        {% assign bundles_list = bundles_list| append: p.last %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if bundles_list %}
+  {% assign bundles_list_array = bundles_list | split: "," | uniq %}
+{% endif %}
+
+{% capture bundleData %}
+    {% if is_bundle_present %}      
+      {% for single_bundle_id in bundles_list_array %}
+        {%  assign titleToShow = "Rutina personalizada" %}
+        {%  assign urlTOBringBackTo = "/" %}
+        {%  assign totalPriceToShow = 0 %}
+        {%  assign firstProductFromBundle = 0 %}
+        {%  assign bundleQuantity = 0 %}
+        {%  assign foundFirst = false %}
+        {% for item in cart.items %}
+          {% for p in item.properties %}
+            {% if p.last contains single_bundle_id %}      
+              {% if item.properties.Bundle != blank %}
+                  {%  if foundFirst == false %}
+                    {%  assign firstProductFromBundle = item.product %}
+                    {%  assign bundleQuantity = item.quantity %}
+                    {%  assign foundFirst = true %}
+                  {%  endif  %}
+                 {% assign totalPriceToShow = totalPriceToShow | plus : item.final_line_price %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        <div class="section clearfix" >
+          <div class="five columns alpha">
+            <a href="{{ urlTOBringBackTo }}" title="{{ titleToShow }}" class="cart_page_image">
+              <img  src="https://cdn.shopify.com/s/files/1/0553/3450/2559/files/bundlepic.png?v=1698915945"
+                    alt="{{ firstProductFromBundle.title | escape }}"
+                    class="lazyload {{ settings.image_loading_style }}"
+                    style="max-width: {{- firstProductFromBundle.image.width -}}px"
+                     
+                     
+                     />
+            </a>
+          </div>
+          <div class="eleven columns omega cart_content_info">
+            <h3>
+              <a href="{{ urlTOBringBackTo }}">{{ titleToShow }}</a>
+            </h3>
+            <p class="modal_price">
+                <span class="money">{{ totalPriceToShow | money }}</span>            
+            </p>
+            <p>
+              {% for item in cart.items %}
+                {% for p in item.properties %}
+                  {% if p.last contains single_bundle_id %}      
+                    {% if item.properties.Bundle != blank %}
+                    <div>
+                        {{ item.title }}: x{{ item.quantity }}
+                    </div>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </p>
+            {% for item in cart.items %}
+              {% for p in item.properties %}
+                {% if p.last contains single_bundle_id %}      
+                  {% if item.properties.Bundle != blank %}
+                  <input type="hidden" name="bundleUpdates{{ single_bundle_id }}[]" class="bundleUpdates{{ single_bundle_id }}" value="{{ item.id }}"  data-key="{{ item.key }}"/>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+        
+            <div class="product-quantity-box left">
+  <!--             <a class="js-remove-bundle" href="{{ urlTOBringBackTo }}">Remove</a> -->
+               {%- if for_drawer -%}
+                  <button class="js-cart-remove-bundle link link--primary" data-class="bundleUpdates{{ single_bundle_id }}" data-key="{{ single_bundle_id.key }}">Eliminar</button>
+                 {% else %}
+              <button class="js-remove-bundle link link--primary" data-class="bundleUpdates{{ single_bundle_id }}" data-key="{{ single_bundle_id.key }}">Eliminar</button>
+                 {% endif %}
+              
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+{% endcapture %}
+
+
+
+<div class="Cart__ItemList js_cart_item_list" >
+  {%- unless for_drawer -%}
+    <div class="Cart__Head hidden-phone">
+      <span class="Cart__HeadItem Heading Text--subdued u-h7">{{ 'cart.items.product' | t }}</span>
+      <span class="Cart__HeadItem"></span>
+      <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: center">{{ 'cart.items.quantity' | t }}</span>
+      <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: right">{{ 'cart.items.total' | t }}</span>
+    </div>
+  {%- endunless -%}
+     {{ bundleData }}
+
+          {% if item.properties.Bundle != blank %}
+          
+          {% continue %}
+          {% else %}
+ 
+      {%- for line_item in cart.items -%}
+        {% if line_item.product.tags contains 'gift' %}
+          {% continue %}
+        {% endif %}
+        {% if line_item.product.tags contains gift %}
+          {% continue %}
+          {% endif %}
+        {% if line_item.properties.Bundle != blank %}
+  
+  {% else %}
+    {%- if for_drawer -%}
+      <div class="CartItemWrapper">
+    {%- endif -%}
+
+    <div class="CartItem">
+      <div class="CartItem__ImageWrapper AspectRatio">
+        <div class="AspectRatio" style="--aspect-ratio: {{ line_item.image.aspect_ratio }}">
+          <img class="CartItem__Image" src="{{ line_item.image | img_url: '240x' }}" alt="{{ line_item.image.alt | escape }}">
+        </div>
+      </div>
+
+      <div class="CartItem__Info">
+        <h2 class="CartItem__Title Heading">
+          <a href="{{ line_item.url }}">{{ line_item.product.title }}</a>
+        </h2>
+
+        <div class="CartItem__Meta Heading Text--subdued">
+          {%- unless line_item.product.has_only_default_variant -%}
+            <p class="CartItem__Variant">{{ line_item.variant.title }}</p>
+          {%- endunless -%}
+
+          {%- if line_item.selling_plan_allocation -%}
+            <p class="CartItem__PlanAllocation">{{ line_item.selling_plan_allocation.selling_plan.name }}</p>
+          {%- endif -%}
+
+          {%- if line_item.properties != empty -%}
+            <ul class="CartItem__PropertyList">
+              {%- for property in line_item.properties -%}
+                {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                {%- if property.last == blank or first_character_in_key == '_' -%}
+                  {%- continue -%}
+                {%- endif -%}
+
+                <li class="CartItem__Property">{{ property.first }}: {{ property.last }}</li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          <div class="CartItem__PriceList">
+            {% if line_item.final_line_price > 0 %}
+            {%- if line_item.original_price != line_item.final_price -%}
+              <span class="CartItem__Price Price Price--highlight 1234">{{ line_item.original_price | money_without_trailing_zeros }}</span>
+              {% comment %}
+              <span class="CartItem__OriginalPrice Price Price--compareAt">{{ line_item.original_price | money_without_trailing_zeros }}</span>
+              {% endcomment %}
+            {%- else -%}
+              <span class="CartItem__Price Price">{{ line_item.final_price | money_without_trailing_zeros }}</span>
+            {%- endif -%}
+
+            {% comment %}
+            {%- if line_item.line_level_discount_allocations != blank -%}
+              <ul class="CartItem__DiscountList">
+                {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+                  <li class="CartItem__Discount">
+                    {%- render 'icon' with 'sale' -%}{{ discount_allocation.discount_application.title }}: -{{ discount_allocation.amount | money }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+            {% endcomment %}
+            {% else %}
+              <span class="CartItem__Price Price">Gratis</span>
+            {% endif %}
+          </div>
+
+          {%- if line_item.unit_price_measurement -%}
+            <div class="CartItem__UnitPriceMeasurement">
+              <div class="UnitPriceMeasurement Heading Text--subdued">
+                <span class="UnitPriceMeasurement__Price">{{ line_item.unit_price | money_without_trailing_zeros }}</span>
+                <span class="UnitPriceMeasurement__Separator">/ </span>
+
+                {%- if line_item.unit_price_measurement.reference_value != 1 -%}
+                  <span class="UnitPriceMeasurement__ReferenceValue">{{ line_item.unit_price_measurement.reference_value }}</span>
+                {%- endif -%}
+
+                <span class="UnitPriceMeasurement__ReferenceUnit">{{ line_item.unit_price_measurement.reference_unit }}</span>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- capture item_actions -%}
+             {%- if template == 'cart' or template == 'cart.ajax' -%}
+             {% if line_item.id == 46841658835279 or line_item.id == 47953266311503 or line_item.id == 47816865710415 or line_item.id == 46841586286927 or line_item.id == 46841543065935 or line_item.id == 46841590022479 or line_item.id == 46841567838543 or line_item.id == 46841578488143 or line_item.id == 46841547718991 %}
+             <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+            
+             </div>
+             {% else %}
+           <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+            {% if  line_item.id == 47816863416655 %}
+            {% else %}
+            <div class="CartItem__QuantitySelector">
+              <div class="QuantitySelector js_cart_qty__wrapper" data-key="{{ line_item.key }}" data-quantity="{{line_item.quantity}}">
+                {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+
+                <a class="QuantitySelector__Button Link Link--primary js_cart_minus" title="{{ 'cart.items.set_quantity' | t: new_quantity: quantity_minus_one }}" href="javascript:;" data-quantity="{{ quantity_minus_one }}" data-line="{{ forloop.index }}" >
+                
+                  {%- render 'icon' with 'minus' -%}
+                </a>
+
+                <input type="text" name="updates[]" id="updates_{{ line_item.key }}" class="QuantitySelector__CurrentQuantity test" pattern="[0-9]*" data-line="{{ forloop.index }}" value="{{ line_item.quantity }}" data-id="{{ line_item.key }}">
+
+                {%- assign quantity_plus_one = line_item.quantity | plus: 1 -%}
+
+                <a class="QuantitySelector__Button Link Link--primary js_cart_plus qty-disabled" title="{{ 'cart.items.set_quantity' | t: new_quantity: quantity_plus_one }}"   data-quantity="{{ quantity_plus_one }}" data-line="{{ forloop.index }}" data-action="update-item-quantity">
+                  {%- render 'icon' with 'plus' -%}
+                </a>
+              </div>
+            </div>
+            {% endif %}
+            <a href="javascript:;" class="CartItem__Remove remove-cart-product Link Link--underline Link--underlineShort" data-quantity="0" data-line="{{ forloop.index }}" data-key="{{ line_item.key }}" >{{ 'cart.items.remove' | t }}</a>
+          </div>
+          {% endif %}
+      {% endif %}
+       
+        {%- unless template == 'cart'  or template == 'cart.ajax' -%}
+          {% if line_item.id == 46841658835279 or line_item.id == 47953266311503 or line_item.id == 47816865710415 or line_item.id == 46841586286927 or line_item.id == 46841543065935 or line_item.id == 46841590022479 or line_item.id == 46841567838543 or line_item.id == 46841578488143 or line_item.id == 46841547718991 %}
+          {% else %} 
+          <div class="CartItem__Actions Heading Text--subdued this-drawer" style="text-align: center" {{line_item.id}}>
+            {% if  line_item.id == 47816863416655 %}
+            <div class="CartItem__QuantitySelector">
+              </div>
+            {% else %}
+            <div class="CartItem__QuantitySelector">
+              <div class="QuantitySelector js-qty__wrapper" data-key="{{ line_item.key }}" data-quantity="{{line_item.quantity}}">
+              
+                <a class="QuantitySelector__Button Link Link--primary js_qtyminus" title="{{ 'cart.items.set_quantity' | t: new_quantity: quantity_minus_one }}" href="javascript:;">
+                  {%- render 'icon' with 'minus' -%}
+                </a>
+
+                <input type="text" name="updates[]" id="updates_{{ line_item.key }}" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" data-id="{{ line_item.key }}"value="{{ line_item.quantity }}">
+ 
+
+                <a class="QuantitySelector__Button Link Link--primary js_qtypluse" title="{{ 'cart.items.set_quantity' | t: new_quantity: quantity_plus_one }}" href="javascript:;" data-quantity="{{ quantity_plus_one }}" data-line="{{ forloop.index }}"  >
+                  {%- render 'icon' with 'plus' -%}
+                </a>
+              </div>
+            </div>
+            {% endif %}
+          <a data-key="{{ line_item.key }}" href="javascript:;"   class="remove-cart-product CartItem__Remove remove-cart-product Link Link--underline Link--underlineShort">Eliminar</a>
+        <!-- <a href="#" class="CartItem__Remove Link Link--underline Link--underlineShort" data-key="{{ item.key }}" data-quantity="0" data-line="{{ forloop.index }}" data-action="remove-item">{{ 'cart.items.remove' | t }}</a> -->
+          </div>
+          {% endif %}
+        {% endunless %}
+        {%- endcapture -%}
+{% if line_item.final_line_price > 0 %}
+        {{ item_actions }}
+{% endif %}
+      </div>
+
+      {%- unless for_drawer -%}
+        {% if line_item.final_line_price > 0 %}
+        {{ item_actions }}
+{% endif %}
+
+        <div class="CartItem__LinePriceList Heading Text--subdued" style="text-align: right">
+          {%- if line_item.original_line_price != line_item.final_line_price -%}
+            <span class="CartItem__Price Price Price--highlight">{{ line_item.final_line_price | money_without_trailing_zeros }}</span>
+            <span class="CartItem__Price Price Price--compareAt">{{ line_item.original_line_price | money_without_trailing_zeros }}</span>
+          {%- else -%}
+            <span class="CartItem__Price Price">{{ line_item.final_line_price | money_without_trailing_zeros }}</span>
+          {%- endif -%}
+        </div>
+      {%- endunless -%}
+    </div>
+
+    {%- if for_drawer -%}
+      </div>
+    {%- endif -%}
+           {% endif %}
+  {%- endfor -%}
+            {% endif %}
+           
+</div>
+

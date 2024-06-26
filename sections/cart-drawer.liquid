@@ -1,0 +1,188 @@
+
+
+{%- capture section_settings -%}
+{
+  "type": {{ settings.cart_type | json }},
+  "itemCount": {{ cart.item_count }},
+  "drawer": true,
+  "hasShippingEstimator": false
+}
+{%- endcapture -%}
+
+<div id="sidebar-cart" class="Drawer Drawer--fromRight" aria-hidden="true" data-section-id="cart" data-section-type="cart" data-section-settings='{{ section_settings }}'>
+  <div class="Drawer__Header Drawer__Header--bordered Drawer__Container">
+      <span class="Drawer__Title Heading u-h4">{{ 'cart.general.title' | t }}</span>
+
+      <button class="Drawer__Close Icon-Wrapper--clickable" data-action="close-drawer" data-drawer-id="sidebar-cart" aria-label="{{ 'header.navigation.close_cart' | t }}">
+        {%- render 'icon' with 'close' -%}
+      </button>
+  </div>
+
+  <form class="Cart Drawer__Content" action="{{ routes.cart_url }}" method="POST" novalidate>
+    <div class="Drawer__Main" data-scrollable>
+      {%- if settings.cart_show_free_shipping_threshold -%}
+        {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+
+        <div class="Cart__ShippingNotice Text--subdued">
+          <div class="Drawer__Container">
+            {%- if cart.total_price >= threshold_in_cents -%}
+              <p>{{- 'cart.general.free_shipping' | t -}}</p>
+            {%- else -%}
+              {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+              <p>{{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}</p>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+      
+
+      {%- if cart.item_count == 0 -%}
+        <p class="Cart__Empty Heading u-h5">{{ 'cart.general.empty' | t }}</p>
+      {%- else -%}
+        <div class="Drawer__Container">
+          <input type="hidden" name="attributes[collection_mobile_items_per_row]" value="">
+          <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
+
+          {% render 'cart-items' %}
+        </div>
+      {%- endif -%}
+        <div class="you-may-also-like cart-drawer-slider-wrap test">
+          <div class="container">
+            <div class="section-title">
+              <h2>{{ section.settings.heading }}</h2>
+            </div>
+            <div class="section-content cart-drawer-slider">
+              {% for block in section.blocks %}
+              {% assign product = all_products[block.settings.product] %}
+              {% for item in cart.items %}
+            {% assign upsell_product_array = upsell_product_array | append:item.id | append:',' %}
+            {% endfor %}
+            {% unless upsell_product_array contains product.selected_or_first_available_variant.id %}
+              <div class="slide">
+                <div class="box js-pro">
+                  <figure>
+                    <a href="{{ product.url }}">
+                      <img
+                        src="{{ product.featured_image | img_url : 'master' }}"
+                        alt="">
+                    </a>
+                  </figure>
+                  <h6>
+                    <a href="javascript:void(0)">{{ product.title }}</a>
+                  </h6>
+                           <span class="product-price">
+                        {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                          <del>
+                            {{ product.selected_or_first_available_variant.compare_at_price | money }}</del>
+                        {% endif %}
+                        {{ product.selected_or_first_available_variant.price | money }}
+                      </span>
+                  <a href="javascript:void(0)" class="btn-quick-shop cart-atc-btn"  data-id="{{ product.selected_or_first_available_variant.id }}">AÑADIR</a>
+                  <a href="{{ product.url }}" class="link-view-product">ver producto</a>
+                </div>
+              </div>
+              {% endunless %}
+        {% endfor %}
+  
+     
+
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+
+
+    {%- unless cart.item_count == 0 -%}
+      <div class="Drawer__Footer" data-drawer-animated-bottom>
+        {%- capture shipping_and_taxes_notice -%}{{ 'cart.general.shipping_and_taxes_notice' | t }}{%- endcapture -%}
+      
+        {%- if settings.cart_enable_notes or shipping_and_taxes_notice != blank -%}
+          {%- if settings.cart_enable_notes -%}
+            {% comment %}
+            {%- if cart.note == blank -%}
+              <button type="button" class="Cart__NoteButton" data-action="toggle-cart-note">{{ 'cart.general.add_note' | t }}</button>
+            {%- else -%}
+              <button type="button" class="Cart__NoteButton" data-action="toggle-cart-note">{{ 'cart.general.edit_note' | t }}</button>
+            {%- endif -%}
+            {% endcomment %}
+          {%- endif -%}
+
+          {%- if shipping_and_taxes_notice != blank -%}
+            <p class="Cart__Taxes Text--subdued">{{ shipping_and_taxes_notice }}</p>
+          {%- endif -%}
+          {% comment %}
+          {%- if cart.cart_level_discount_applications != blank -%}
+            {%- for discount_application in cart.cart_level_discount_applications -%}
+              <p class="Cart__Discount">{%- render 'icon' with 'sale' -%} {{ 'cart.general.discount' | t }} ({{ discount_application.title }}): -<span>{{ discount_application.total_allocated_amount | money_without_trailing_zeros }}</span></p>
+            {%- endfor -%}
+          {%- endif -%}
+        {% endcomment %}
+        {%- endif -%}
+
+        <button type="submit" name="checkout" class="Cart__Checkout Button Button--primary Button--full">
+          <span>{{- 'cart.general.checkout' | t -}}</span>
+          <span class="Button__SeparatorDot"></span>
+          <span>{{ cart.total_price | money_without_trailing_zeros }}</span>
+        </button>
+
+        {%- if settings.cart_enable_notes -%}
+          {% comment %}
+          <div class="Cart__OffscreenNoteContainer" aria-hidden="true">
+            {%- if cart.note == blank -%}
+              <span class="Cart__NoteButton">{{ 'cart.general.add_note' | t }}</span>
+            {%- else -%}
+              <span class="Cart__NoteButton">{{ 'cart.general.edit_note' | t }}</span>
+            {%- endif -%}
+            
+            <div class="Form__Item">
+              <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="3" placeholder="{{ 'cart.general.note_placeholder' | t }}" data-scrollable>{{ cart.note }}</textarea>
+            </div>
+            
+            <button type="button" class="Button Button--primary Button--full" data-action="toggle-cart-note">{{ 'cart.general.save_note' | t }}</button>
+        
+          </div>
+          {% endcomment %}
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+  </form>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Cart Drawer",
+    "settings": [
+
+          {
+         "type":"textarea",
+         "id":"heading",
+         "label":"Heading",
+         "default":"YOU MAY ALSO LIKE OUR EXCLUSIVE MERCHANDISE"
+      }
+    ],
+        "blocks": [
+      {
+        "type": "suggestion-product",
+        "name": "Suggestion Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Suggestion Product"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

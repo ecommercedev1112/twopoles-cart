@@ -1,0 +1,107 @@
+
+
+<section class="our-team">
+    <div class="cus-container">
+        <div class="section-title">
+            <h1>{{ section.settings.heading }}</h1>
+        </div>
+        <div class="our-team-wrap">
+            {% for block in section.blocks %}   
+            <a href="javascript:void(0)" class="team-box">
+                <div class="title-img-wrap">
+                   {% if block.settings.our_team_image != blank %}
+                    <figure>
+                        <img src="{{ block.settings.our_team_image |  img_url: '700x' }}" alt="">
+                    </figure>
+                  {% endif %}
+                    {% if block.settings.image_title != blank %}
+                    <h4>{{ block.settings.image_title }}</h4>
+                   {% endif %}
+                </div>            
+                <div class="wrap-content">
+                    <div class="desc-text">
+                        {{ block.settings.image_content1 }}
+                        {{ block.settings.image_content2 }}
+                    </div>
+                    <div class="title-text">
+                        <h3>{{ block.settings.hover_title1 }}</h3>
+                        <h6>{{ block.settings.hover_title2 }}</h6>
+                        <figure class="profile-pic">
+                           <img src="{{ block.settings.our_team_image |  img_url: '700x' }}" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </a>
+      {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+   "name":"EQ Our Team Page",
+   "settings":[
+       {
+         "type":"textarea",
+         "id":"heading",
+         "label":"Heading",
+         "default":"Equipo Two Polse"
+      }
+   ],
+   "blocks":[
+      {
+         "type":"our-team-block",
+         "name":"Our Team Block",
+         "settings":[
+            {
+               "type":"url",
+               "id":"image_link",
+               "label":"Image Link"
+            },
+            {
+               "type":"image_picker",
+               "id":"our_team_image",
+               "label":"Our Team Image"
+            },
+            {
+               "type":"textarea",
+               "id":"image_title",
+               "label":"Image Title"
+            },
+              {
+               "type":"html",
+               "id":"image_content1",
+               "label":"Image content1"
+            },
+            {
+               "type":"html",
+               "id":"image_content2",
+               "label":"Image Content2"
+            },
+             {
+               "type":"textarea",
+               "id":"hover_title1",
+               "label":"Hover Title1"
+            },
+             {
+               "type":"textarea",
+               "id":"hover_title2",
+               "label":"Hover Title2"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"EQ Our Team Page"
+      }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+ 
+{% javascript %}
+{% endjavascript %}

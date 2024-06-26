@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "main": {
+      "type": "routine-finder",
+      "settings": {
+        "product1": "limpiadora-facial",
+        "product2": "make-up-melting-cleansing-oil",
+        "product3": "brightening-serum",
+        "product4": "morning-glow-serum",
+        "product5": "tonico-facial-exfoliante",
+        "product6": "crema-hidratante-facial",
+        "product7": "cica-face-cream",
+        "product8": "smart-eye-cream",
+        "product9": "retinol-serum-noche"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

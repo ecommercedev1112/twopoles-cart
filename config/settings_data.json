@@ -1,0 +1,2651 @@
+{
+  "current": {
+    "heading_color": "#1c1b1b",
+    "text_color": "#1c1b1b",
+    "text_light_color": "#6a6a6a",
+    "link_color": "#6a6a6a",
+    "background": "#ffffff",
+    "light_background": "#ffffff",
+    "product_on_sale_color": "#6c9298",
+    "button_background": "#1c1b1b",
+    "button_text_color": "#ffffff",
+    "header_background": "#ffffff",
+    "header_heading_color": "#1c1b1b",
+    "header_light_color": "#6a6a6a",
+    "footer_background": "#ffffff",
+    "footer_heading_color": "#1c1b1b",
+    "footer_text_color": "#1c1b1b",
+    "navigation_background": "#1c1b1b",
+    "navigation_text_color": "#ffffff",
+    "newsletter_popup_background": "#1c1b1b",
+    "newsletter_popup_text_color": "#ffffff",
+    "secondary_elements_background": "#1c1b1b",
+    "secondary_elements_text_color": "#ffffff",
+    "freegifts": [
+      "pack-mini-cloud-cleansing-regalo",
+      "neceser-regalo"
+    ],
+    "cart_show_free_shipping": true,
+    "congrats": "¡Enhorabuena!",
+    "yougot": "¡Has obtenido *gift*!",
+    "noGift": "",
+    "unlockall": "",
+    "heading_font": "harmonia_sans_n4",
+    "heading_size": "small",
+    "uppercase_heading": true,
+    "text_font": "harmonia_sans_n4",
+    "base_text_font_size": 14,
+    "show_page_transition": true,
+    "show_button_transition": false,
+    "search_mode": "product,article",
+    "product_show_price_on_hover": false,
+    "product_show_secondary_image": true,
+    "product_info_alignment": "center",
+    "product_image_size": "tall",
+    "product_list_horizontal_spacing": "extra_small",
+    "product_list_vertical_spacing": "extra_small",
+    "cart_type": "drawer",
+    "cart_enable_notes": true,
+    "cart_show_free_shipping_threshold": true,
+    "cart_free_shipping_threshold": "50",
+    "tab1_heading": "Añadir muestras gratis",
+    "free_sapmle_heading": "Elige tu muestra gratis (puedes elegir dos)",
+    "product1": "brightening-serum-sample",
+    "product2": "cica-face-cream-sample",
+    "product3": "cleansing-cream-sachet",
+    "product4": "cloud-moisturizer-sample",
+    "product5": "night-serum-sample",
+    "product6": "smart-eye-cream-sample",
+    "product7": "the-porefect-exfoliant-sample",
+    "tab2_heading": "Puede interesarte también",
+    "sugg_heading": "Creo que estas cositas también te pueden gustar",
+    "product8": "lip-hero-balm",
+    "product10": "crema-hidratante-facial",
+    "social_pinterest": "www.pinterest.es\/twopolescosmetics",
+    "social_instagram": "https:\/\/www.instagram.com\/twopolescosmetics\/",
+    "favicon": "shopify:\/\/shop_images\/Diseno_sin_titulo_13.png",
+    "show_wrap_for_gift": false,
+    "gift_product": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/TwoPoles_Positive.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#efefef",
+    "checkout_accent_color": "#1c1b1b",
+    "checkout_button_color": "#1c1b1b",
+    "freegift": "free-gift",
+    "sections": {
+      "sidebar-menu": {
+        "type": "sidebar-menu",
+        "settings": {
+          "primary_menu": "main-menu",
+          "secondary_menu": "mobile-menu",
+          "show_social_media": true
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "enable_bar": true,
+          "home_page_only": false,
+          "background": "#1c1b1b",
+          "text_color": "#ffffff",
+          "content": "TWO POLES WEEK | DTOS HASTA 25% OFF  | CÓDIGO: TPWEEK",
+          "link": "https:\/\/twopoles.co\/collections\/cosmetics"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "371b11f7-0f85-48d4-8d8f-533eae39c46d": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "SHOP",
+              "push_1_heading": "",
+              "push_1_subheading": "",
+              "push_1_url": "shopify:\/\/collections\/the-brightening-collection",
+              "push_2_image": "shopify:\/\/shop_images\/midnght_square_web.png",
+              "push_2_heading": "MIDNIGHT MASK",
+              "push_2_subheading": "CENTELLA & CERAMIDES",
+              "push_2_url": "shopify:\/\/products\/midnight-mask"
+            }
+          },
+          "e408e093-3a09-4cb9-9d33-54164fd1e990": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "KNOWLEDGE",
+              "push_1_image": "shopify:\/\/shop_images\/Diseno_sin_titulo_12.jpg",
+              "push_1_heading": "VISITA NUESTRO BLOG",
+              "push_1_subheading": "Aprende con nosotras",
+              "push_1_url": "shopify:\/\/blogs\/news",
+              "push_2_image": "shopify:\/\/shop_images\/diccingrednou.png",
+              "push_2_heading": "diccionario de ingredientes",
+              "push_2_subheading": "nuestros principios activos",
+              "push_2_url": "shopify:\/\/pages\/diccionario-ingredientes"
+            }
+          },
+          "51ec17a4-cc2f-4185-93dc-175b0e9563b9": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "",
+              "push_1_heading": "Example heading",
+              "push_1_subheading": "Example sub-heading",
+              "push_1_url": "",
+              "push_2_heading": "Example heading",
+              "push_2_subheading": "Example sub-heading",
+              "push_2_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "371b11f7-0f85-48d4-8d8f-533eae39c46d",
+          "e408e093-3a09-4cb9-9d33-54164fd1e990",
+          "51ec17a4-cc2f-4185-93dc-175b0e9563b9"
+        ],
+        "settings": {
+          "use_sticky_header": true,
+          "logo": "shopify:\/\/shop_images\/TwoPoles_Positive.png",
+          "logo_max_width": 140,
+          "mobile_logo_max_width": 90,
+          "show_currency_selector": false,
+          "show_locale_selector": true,
+          "navigation_menu": "main-menu",
+          "navigation_style": "inline",
+          "show_icons": true,
+          "enable_transparent_header": true,
+          "enable_transparent_header_collection": false,
+          "show_transparent_header_border": true,
+          "transparent_text_color": "#ffffff",
+          "transparent_logo": "shopify:\/\/shop_images\/TwoPoles_Negative.png"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-2": {
+            "type": "newsletter",
+            "disabled": true,
+            "settings": {
+              "title": "Newsletter",
+              "content": "<p>Sus<\/p>"
+            }
+          },
+          "footer-0": {
+            "type": "text",
+            "settings": {
+              "title": "¿TIENES DUDAS?",
+              "content": "<p>✉︎ hello@twopoles.co<br\/><br\/><\/p><p>¡Síguenos!<\/p>",
+              "show_social_media": true
+            }
+          },
+          "footer-1": {
+            "type": "links",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "fc17a8d8-1226-4869-bc03-71efe9cc2705": {
+            "type": "links",
+            "settings": {
+              "menu": "comprar-cosm-tica"
+            }
+          },
+          "5a8b0fdb-d3ad-4293-9f79-f336550d7946": {
+            "type": "links",
+            "settings": {
+              "menu": "legal"
+            }
+          }
+        },
+        "block_order": [
+          "footer-2",
+          "footer-0",
+          "footer-1",
+          "fc17a8d8-1226-4869-bc03-71efe9cc2705",
+          "5a8b0fdb-d3ad-4293-9f79-f336550d7946"
+        ],
+        "settings": {
+          "show_payment_methods": true,
+          "show_currency_selector": true,
+          "show_locale_selector": true
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "059fac75-f7f8-4843-a3c2-035add97c8de": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BANNERS_horitzontal_webdiscovery.png",
+              "mobile_image": "shopify:\/\/shop_images\/banner_mobile_webDISCOVERYMOBILE.png",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "PACK RUTINA LUMINOSIDAD",
+              "title": "THE DISCOVERY SET",
+              "button_1_text": "VER MÁS",
+              "button_1_link": "shopify:\/\/products\/the-discovery-set",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "67a1f4ae-77f8-457b-a1e0-35bbf8493d07": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BANNERS_horitzontal_web.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/banner_mobile_web_01d56813-0ea5-4611-95c7-b9b84504b8a8.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "MANCHAS, GRANITOS O MARCAS DE ACNÉ",
+              "title": "brightening serum is back",
+              "button_1_text": "VER MÁS",
+              "button_1_link": "shopify:\/\/collections\/the-brightening-collection",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "059fac75-f7f8-4843-a3c2-035add97c8de",
+          "67a1f4ae-77f8-457b-a1e0-35bbf8493d07"
+        ],
+        "disabled": true,
+        "settings": {
+          "show_fullscreen": false,
+          "show_arrow": false,
+          "autoplay": true,
+          "cycle_speed": 5,
+          "text_color": "#ffffff",
+          "button_color": "#363636",
+          "button_background": "#ffffff"
+        }
+      },
+      "featured-collections": {
+        "type": "featured-collections",
+        "blocks": {
+          "bb3e3d8f-c840-4883-959c-187976944538": {
+            "type": "collection",
+            "settings": {
+              "collection": "productos-destacados",
+              "title": "",
+              "grid_items_count": 8,
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "bb3e3d8f-c840-4883-959c-187976944538"
+        ],
+        "settings": {
+          "title": "DESCUBRE LOS BEST SELLERS",
+          "layout_mode": "grid",
+          "show_product_info": true,
+          "show_vendor": true,
+          "show_color_swatch": false,
+          "grid_mobile_items_per_row": "2",
+          "grid_desktop_items_per_row": 4
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "blocks": {
+          "collection-0": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "",
+              "image": "shopify:\/\/shop_images\/Packs-rutinas.jpg",
+              "image_alignment": "center center",
+              "content_position": "bottomCenter",
+              "subheading": "Enamórate de",
+              "title": "Nuestros productos",
+              "button_text": "VER PRODUCTOS",
+              "button_link": "shopify:\/\/collections",
+              "apply_overlay": true
+            }
+          },
+          "collection-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify:\/\/shop_images\/C0509765-9805-4B20-9DD5-98C30DAA7F05.png",
+              "image_alignment": "center left",
+              "content_position": "middleRight",
+              "subheading": "DESCRUBRE NUESTRAS",
+              "title": "RUTINAS",
+              "button_text": "VER packs",
+              "button_link": "shopify:\/\/collections\/rutinas-y-packs",
+              "apply_overlay": true
+            }
+          }
+        },
+        "block_order": [
+          "collection-0",
+          "collection-1"
+        ],
+        "settings": {
+          "image_size": "normal",
+          "add_spacing": false,
+          "expand_collection": true,
+          "stack_on_mobile": true,
+          "text_color": "#ffffff",
+          "button_color": "#363636"
+        }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "disabled": true,
+        "settings": {
+          "subheading": "SHOP",
+          "title": "THE PACK",
+          "show_headings_on_mobile": true,
+          "product": "the-pack",
+          "show_vendor": true,
+          "show_sku": false,
+          "show_description": true,
+          "description_below_add_to_cart": false,
+          "selector_mode": "dropdown",
+          "show_color_swatch": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": false,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 3,
+          "show_price_in_button": false,
+          "show_payment_button": false,
+          "show_pickup_availability": false
+        }
+      },
+      "timeline": {
+        "type": "timeline",
+        "blocks": {
+          "item-0": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/descarga_3.jpg",
+              "apply_overlay": true,
+              "title": "NIGHT SERUM",
+              "subheading": "about the brand",
+              "heading": "Cosmética natural",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<br\/><br\/><a href=\"\/products\/night-serum\" title=\"Night serum\">VER PRODUCTO<\/a><\/p>"
+            }
+          },
+          "74528a20-d2d0-46d3-979e-5eb11f83015e": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/descarga_2.jpg",
+              "apply_overlay": true,
+              "title": "CLOUD MOSURIZER",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          },
+          "704c1630-905f-4bf7-9265-e5838f39acb9": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/descarga_4.jpg",
+              "apply_overlay": true,
+              "title": "THE POREFECT TONER",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          },
+          "4ed3fc9c-b856-43db-b58d-ea0c64409b56": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/descarga_1.jpg",
+              "apply_overlay": true,
+              "title": "CLEANSING CREAM",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "item-0",
+          "74528a20-d2d0-46d3-979e-5eb11f83015e",
+          "704c1630-905f-4bf7-9265-e5838f39acb9",
+          "4ed3fc9c-b856-43db-b58d-ea0c64409b56"
+        ],
+        "disabled": true,
+        "settings": {
+          "text_color": "#ffffff"
+        }
+      },
+      "blog-posts": {
+        "type": "blog-posts",
+        "blocks": {
+          "blog-0": {
+            "type": "blog",
+            "settings": {
+              "blog": "news"
+            }
+          }
+        },
+        "block_order": [
+          "blog-0"
+        ],
+        "disabled": true,
+        "settings": {
+          "subheading": "",
+          "title": "Featured article",
+          "show_category": false,
+          "button_link": "",
+          "button_text": "View all articles"
+        }
+      },
+      "shop-the-look": {
+        "type": "shop-the-look",
+        "blocks": {
+          "look-0": {
+            "type": "look",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Diseno_sin_titulo_17.jpg",
+              "dot_style": "light",
+              "product_1": "the-essentials-set",
+              "product_1_horizontal_position": 50,
+              "product_1_vertical_position": 37,
+              "product_2": "",
+              "product_2_horizontal_position": 45,
+              "product_2_vertical_position": 65,
+              "product_3": "",
+              "product_3_horizontal_position": 70,
+              "product_3_vertical_position": 50
+            }
+          }
+        },
+        "block_order": [
+          "look-0"
+        ],
+        "settings": {
+          "subheading": "COMPRA",
+          "title": "LA RUTINA COMPLETA",
+          "show_mobile_product_info": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "blocks": {
+          "video_A9drkn": {
+            "type": "video",
+            "settings": {
+              "video_id": "gf_eFXK1GfU?si=-GTxSFu8wzqIr2gd",
+              "video_pos": 3
+            }
+          },
+          "video_HUXgpp": {
+            "type": "video",
+            "settings": {
+              "video_id": "0ZXzK8fdHPY?si=nz68W66eglINks90",
+              "video_pos": 7
+            }
+          },
+          "video_QWkTKR": {
+            "type": "video",
+            "settings": {
+              "video_id": "QGESfeL2nw8?si=9tJSBXvcqR5PB8hg",
+              "video_pos": 10
+            }
+          },
+          "video_RVbid3": {
+            "type": "video",
+            "settings": {
+              "video_id": "2BXsxushUQY?",
+              "video_pos": 2
+            }
+          }
+        },
+        "block_order": [
+          "video_A9drkn",
+          "video_HUXgpp",
+          "video_QWkTKR",
+          "video_RVbid3"
+        ],
+        "settings": {
+          "show_collection_info": true,
+          "show_collection_image": true,
+          "apply_overlay": true,
+          "show_color_swatch": false,
+          "show_vendor": true,
+          "collection_image_size": "small",
+          "show_sort_by": false,
+          "show_layout_switch": true,
+          "toolbar_position": "top",
+          "filter_position": "sidebar",
+          "filter_mode": "group",
+          "show_filter_color_swatch": true,
+          "filter_menu": "",
+          "grid_items_per_page": 16,
+          "grid_mobile_items_per_row": "2",
+          "grid_desktop_items_per_row": 4
+        }
+      },
+      "recently-viewed-products": {
+        "type": "recently-viewed-products",
+        "settings": {
+          "show_section": false,
+          "title": "Vistos recientemente",
+          "show_product_info": false,
+          "show_vendor": false,
+          "show_color_swatch": false
+        }
+      },
+      "collection-footer": {
+        "type": "collection-footer",
+        "settings": {
+          "show_section": false,
+          "image": "shopify:\/\/shop_images\/Anna-Fuster-TwoPoles.png",
+          "text_color": "#ffffff",
+          "apply_overlay": true,
+          "title": "CONOCE A ANNA",
+          "content": "<p><\/p><p>Descubre la história detrás de TWO POLES.<\/p><p><a href=\"\/blogs\/news\" target=\"_blank\" title=\"Consejos de Anna\">Leer más<\/a><\/p>",
+          "blog_img_1": "shopify:\/\/shop_images\/Untitled_design_4_400x_77003ffa-5a78-4570-abbc-801583347a9a.webp",
+          "blog_img_2": "shopify:\/\/shop_images\/3_1000x_400x_0d578eab-57ab-436e-b710-9ec30966a1c6.webp",
+          "blog_img_3": "shopify:\/\/shop_images\/TP-47_1_400x_e2b739ab-4672-4962-b7bd-c1ebefd158b3.webp"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_share_buttons": true,
+          "show_vendor": true,
+          "show_sku": false,
+          "show_taxes_included": false,
+          "description_below_add_to_cart": true,
+          "selector_mode": "block",
+          "show_color_swatch": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": false,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 3,
+          "show_price_in_button": false,
+          "show_payment_button": true,
+          "show_pickup_availability": false,
+          "image_size": "small",
+          "stack_images": false,
+          "show_thumbnails": false,
+          "enable_image_zoom": false,
+          "enable_video_looping": false,
+          "tab_page_1_handle": "",
+          "tab_page_2_handle": "",
+          "reviews_enabled": true,
+          "featured_image_size": "small"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "DESCUBRE LA RUTINA COMPLETA",
+          "show_product_info": true,
+          "show_vendor": true,
+          "show_color_swatch": true
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "show_popup": false,
+          "show_only_on_index": true,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "title": "Popup",
+          "content": "<p>You can use this popup to display some useful information to your customers.<\/p>",
+          "show_newsletter": true,
+          "apparition_delay": 5
+        }
+      },
+      "16389807096ba8e58c": {
+        "type": "newsletter",
+        "disabled": true,
+        "settings": {
+          "section_size": "normal",
+          "text_color": "#ffffff",
+          "button_color": "#1c1b1b",
+          "subheading": "Keep updated",
+          "title": "Newsletter",
+          "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+        }
+      },
+      "1638980730764d2b46": {
+        "type": "blog-posts",
+        "blocks": {
+          "1638980730764d2b46-0": {
+            "type": "blog",
+            "settings": {
+              "blog": "news"
+            }
+          }
+        },
+        "block_order": [
+          "1638980730764d2b46-0"
+        ],
+        "disabled": true,
+        "settings": {
+          "subheading": "",
+          "title": "SOBRE NOSOTROS",
+          "show_category": false,
+          "button_link": "",
+          "button_text": "CONOCER MÁS"
+        }
+      },
+      "1638981883cad1d5e2": {
+        "type": "custom-html",
+        "disabled": true,
+        "settings": {
+          "subheading": "DESCUBRE LOS PILARES DE NUESTRA",
+          "title": "COSMÉTICA INTELIGENTE",
+          "html": "<div id=\"shopify-section-1580987985089_home\" class=\"shopify-section shopify-section--bordered\">\n<section class=\"Section_brandbullets\" id=\"section-1580987985089\">\n<div class=\"Container_home\">\n<div class=\"Rte\" style=\"text-align: center;\">\n<div id=\"shopify-section-product-img-with-icon_home\" class=\"shopify-section product-img-with-icons_home\">\n<div class=\"img_with_icon_part_home\">\n<div class=\"Container_home\">\n<div class=\"image_text_main\">\n<div class=\"img_with_icon_home\">\n<div class=\"small_icon_home\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0553\/3450\/2559\/files\/Diseno_sin_titulo_6.png?v=1638983196\"><\/div>\n<h5>FÓRMULAS EFICACES<\/h5>\n<\/div>\n<div class=\"img_with_icon\">\n<div class=\"small_icon_home\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0553\/3450\/2559\/files\/Diseno_sin_titulo_5.png?v=1638982844\"><\/div>\n<h5>VEGANA &amp; PLANT BASED<\/h5>\n<\/div>\n<div class=\"img_with_icon\">\n<div class=\"small_icon_home\"><img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0553\/3450\/2559\/files\/Diseno_sin_titulo_6.png?v=1638983196\"><\/div>\n<h5>CRUELTY FREE<\/h5>\n<\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div>\n<\/div><\/section>\n<\/div>"
+        }
+      },
+      "1642936780a5db7f30": {
+        "type": "maestrooo-instagram",
+        "settings": {
+          "title": "¡Síguenos!",
+          "subheading": "<p>@twopolescosmetics<\/p>",
+          "button_text": "",
+          "button_link": "https:\/\/Www.instagram.com\/twopolescosmetics",
+          "layout": "grid",
+          "image_size": "large",
+          "full_width": true,
+          "add_spacing": false,
+          "rows_count": 2,
+          "show_author": false,
+          "show_caption": true,
+          "show_date": true,
+          "click_action": "open_instagram",
+          "heading_color": "#000000",
+          "subheading_color": "#000000",
+          "button_background": "#000000",
+          "button_color": "#ffffff",
+          "overlay_color": "#000000",
+          "overlay_text_color": "#ffffff",
+          "overlay_opacity": 65
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "show_rss": false,
+          "show_tags": false,
+          "show_featured_article": false,
+          "show_category": false
+        }
+      },
+      "shop-now": {
+        "type": "shop-now",
+        "blocks": {
+          "d28287ee-bda5-40e3-a1d2-e3f6f1303360": {
+            "type": "quote",
+            "settings": {
+              "content": "<p>You can use this element to add a quote, content...<\/p>",
+              "author": ""
+            }
+          }
+        },
+        "block_order": [
+          "d28287ee-bda5-40e3-a1d2-e3f6f1303360"
+        ],
+        "settings": {
+          "show_section": false,
+          "title": "Shop now",
+          "collection": "cosmetics",
+          "grid_items_count": 6,
+          "show_product_info": true,
+          "show_vendor": true,
+          "show_color_swatch": false
+        }
+      },
+      "1642975280d77c04c3": {
+        "type": "blog-posts",
+        "blocks": {
+          "1642975280d77c04c3-0": {
+            "type": "blog",
+            "settings": {
+              "blog": "news"
+            }
+          }
+        },
+        "block_order": [
+          "1642975280d77c04c3-0"
+        ],
+        "settings": {
+          "subheading": "aprende con nosotras",
+          "title": "knowledge corner",
+          "show_category": false,
+          "button_link": "shopify:\/\/blogs\/news",
+          "button_text": "ir al knowledge corner"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "collections_to_show": "all",
+          "image_size": "normal",
+          "add_spacing": true,
+          "expand_collection": false,
+          "apply_overlay": true,
+          "text_color": "#ffffff",
+          "button_color": "#363636"
+        }
+      },
+      "1642977627cbcce78a": {
+        "type": "slideshow",
+        "blocks": {
+          "1642977627cbcce78a-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Anna-Fuster-TwoPoles.png",
+              "mobile_image": "shopify:\/\/shop_images\/Two-Poles-fundadora-Anna.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "la historia detrás de",
+              "title": "TWO POLES",
+              "button_1_text": "CONOCE A ANNA",
+              "button_1_link": "shopify:\/\/pages\/about-us",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1642977627cbcce78a-0"
+        ],
+        "settings": {
+          "show_fullscreen": false,
+          "show_arrow": false,
+          "autoplay": true,
+          "cycle_speed": 5,
+          "text_color": "#ffffff",
+          "button_color": "#363636",
+          "button_background": "#ffffff"
+        }
+      },
+      "1644931583c369a428": {
+        "type": "slideshow",
+        "blocks": {
+          "1644931583c369a428-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Anna-Fuster-TwoPoles.png",
+              "mobile_image": "shopify:\/\/shop_images\/Two-Poles-fundadora-Anna.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomRight",
+              "subheading": "Nos encanta que aprendas con nosotras",
+              "title": "ENTRA EN EL KNOWLEDGE CORNER",
+              "button_1_text": "LEER MÁS",
+              "button_1_link": "shopify:\/\/blogs\/news",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1644931583c369a428-0"
+        ],
+        "disabled": true,
+        "settings": {
+          "show_fullscreen": false,
+          "show_arrow": false,
+          "autoplay": true,
+          "cycle_speed": 5,
+          "text_color": "#ffffff",
+          "button_color": "#363636",
+          "button_background": "#ffffff"
+        }
+      },
+      "page-faq-template": {
+        "type": "page-faq-template",
+        "blocks": {
+          "page-faq-template-0": {
+            "type": "separator",
+            "settings": {
+              "title": "A"
+            }
+          },
+          "page-faq-template-1": {
+            "type": "question",
+            "settings": {
+              "title": "ACEITE DE ARGÁN",
+              "answer": "<p><strong>INCI: Argania Spinosa Kernel Oil<\/strong><br\/><br\/>El argán es un árbol de tamaño pequeño con tronco espinoso nativo de la región suroeste de Marruecos. Su aceite proviene del extracto de las semillas que el árbol produce. <br\/>Beneficios: nutre la piel y el cabello. Es altamente hidratante y contiene vitaminas (vitamina E mayoritariamente), antioxidantes y ácidos grasos esenciales (80%). No engrasa la piel, por lo que es apto para pieles grasas y\/o con tendencia acnéica. Además, es cicatrizante y adecuado para calmar eritemas. Es no comedogénico.<\/p>"
+            }
+          },
+          "page-faq-template-2": {
+            "type": "question",
+            "settings": {
+              "title": "ACEITE DE GIRASOL",
+              "answer": "<p><strong>INCI: Helianthus Annuus Seed Oil<\/strong><\/p><p>El aceite de girasol es rico en ácidos omega-6 y vitamina E, y se obtiene a partir de las pipas de girasol Helianthus Annus.<\/p><p><strong>Se trata de un<\/strong> excelente agente reparador de la piel. Previene la deshidratación de la piel y tiene propiedades calmantes, nutritivas y antibacterianas. Es perfecto para tratar pieles secas pero también para pieles grasas con o sin granitos. Es no comedogénico.<\/p>"
+            }
+          },
+          "page-faq-template-3": {
+            "type": "question",
+            "settings": {
+              "title": "ACEITE DE JOJOBA",
+              "answer": "<p><strong>INCI: Simmondsia Chinensis Seed Oil<\/strong><\/p><p>El aceite de jojoba proviene de la nuez (semilla) de la jojoba (simmondsia chinensis). Tiene una composición del 96% de ceramidas.<\/p><p><strong>Beneficios: <\/strong>Ayuda a regular la función barrera de la piel y la hidratación de forma intensiva. El aceite de jojoba también contiene ácido linoleico que es un reestructurador y regenerador de la piel natural muy efectivo. Es no comedogénico, por lo que es perfecto para todo tipo de pieles.<\/p>"
+            }
+          },
+          "aeb910e5-fef5-4bcf-8b30-67b322f3afa1": {
+            "type": "question",
+            "settings": {
+              "title": "ACEITE DE OLIVA",
+              "answer": "<p><strong>INCI: Olea Europaea Fruit Oil<\/strong><\/p><p>Se obtiene de la primera presión en frío de las aceitunas.<\/p><p><strong>Beneficios<\/strong>: Se trata de un aceite reparador, además de luchar contra la sequedad de la piel al incluir una gran cantidad de ácidos grasos naturales en su composición. También es rico en vitaminas E y K.<\/p>"
+            }
+          },
+          "c58bd6a6-61ae-4a29-957b-a1609280299f": {
+            "type": "question",
+            "settings": {
+              "title": "ACEITE DE SOJA",
+              "answer": "<p><strong>INCI: Glycine Soja Oil<\/strong><\/p><p>Se obtiene de las semillas de soja, una legumbre con un gran valor energético y nutritivo, y muy rica en proteínas. Este aceite tiene un alto contenido en vitaminas (A, B6, B12 y K), calcio, magnesio y potasio.<\/p><p><strong>Beneficios<\/strong>: Tiene funciones  antioxidantes, hidratantes y reafirmantes. También actúa estimulando el proceso de regeneración celular y en ocasiones funciona como tensioactivo. Penetra con facilidad en la epidermis y estimula la síntesis de colágeno y elastina.<\/p>"
+            }
+          },
+          "page-faq-template-4": {
+            "type": "separator",
+            "settings": {
+              "title": "B"
+            }
+          },
+          "page-faq-template-5": {
+            "type": "question",
+            "settings": {
+              "title": "BAKUCHIOL",
+              "answer": "<p><strong>INCI: Bakuchiol<\/strong><\/p><p><strong>Se trata<\/strong> principio activo vegano, obtenido de las semillas de la planta Psoralea corylifolia o Babchi.<\/p><p><strong>Beneficios:<\/strong> Lo han comparado con los beneficios del retinol, salvando las distancias. Se trata de un ingrediente no irritante y vegano que aporta a la piel suavidad, elasticidad, luminosidad, disminuye arrugas y unifica el tono de piel. También es un ingrediente muy indicado para pieles acnéicas, tiene propiedades seboreguladoras e antiinflamatorias. Además, hay estudios que demuestran que en combinación con el retinol, se potencian sus propiedades.<\/p>"
+            }
+          },
+          "page-faq-template-6": {
+            "type": "question",
+            "settings": {
+              "title": "BETAINA",
+              "answer": "<p><strong>INCI: Betaine<\/strong><\/p><p>Ingrediente<strong> <\/strong>derivado de las raíces de la remolacha azucarera.<\/p><p><strong>Beneficios<\/strong>: Es un tensioactivo suave. Proporciona hidratación inmediata y a largo plazo y es humectante. Ayuda a mantener el manto hidrolipídico de la piel y refuerza la barrera cutánea durante la limpieza. <\/p>"
+            }
+          },
+          "cec56740-cfb9-405e-8ee0-65c23738c4b2": {
+            "type": "question",
+            "settings": {
+              "title": "BISABOLOL",
+              "answer": "<p><strong>INCI: Bisabolol<\/strong><\/p><p>El alfa-bisabolol es un alcohol sesquiterpeno monocíclico natural que se encuentra en plantas como la manzanilla o el árbol de candeia, originario de Brasil.<\/p><p><strong>Beneficios:<\/strong> Es un poderoso agente calmante para la piel. Actúa minimizando rojeces inducidas por las radiaciones UV y también protege de otras agresiones externas y el estrés ambiental. Es un gran agente para combatir inflamaciones e irritaciones de las pieles más sensibles, lo cual lo hace ideal en combinación con el Retinol para minimizar sus efectos irritantes al principio.<\/p>"
+            }
+          },
+          "page-faq-template-7": {
+            "type": "separator",
+            "settings": {
+              "title": "C"
+            }
+          },
+          "page-faq-template-8": {
+            "type": "question",
+            "settings": {
+              "title": "CAPRYLIC\/CAPRIC TRIGLYCERIDE",
+              "answer": "<p><strong>INCI: Caprylic\/Capric Triglyceride<\/strong><\/p><p>Derivado del Aceite de Coco y Glicerina, es considerado un excelente emoliente y agente de reparación de la piel. Se trata de una mezcla de ácidos grasos. <\/p><p><strong>Beneficios<\/strong>: Repara la superficie de la piel y mejora la función barrera de la piel. También funciona como espesante, nos ayuda a mejorar las texturas en formulación. Se trata de aceites neutros que no irritan la piel, son fáciles de aplicar y se absorben muy rápidamente.<\/p>"
+            }
+          },
+          "d95db841-649f-4208-acc9-b833d6f86146": {
+            "type": "question",
+            "settings": {
+              "title": "CETEARYL ALCOHOL",
+              "answer": "<p><strong>INCI: Cetearyl Alcohol<\/strong><\/p><p>Son una<strong> <\/strong>mezcla de alcoholes grasos que se producen de forma natural en las plantas y sus frutos.<\/p><p><strong>Beneficios<\/strong>: En las formulaciones se utiliza como emulsionante, utilizado para crear cremas y texturas cremosas en cosmética natural certificada. Nos ayuda a estabilizar fórmulas.<\/p>"
+            }
+          },
+          "43ff5829-37f2-4964-98d2-082606022447": {
+            "type": "question",
+            "settings": {
+              "title": "CITRIC ACID",
+              "answer": ""
+            }
+          },
+          "0c169fce-c7ae-49d6-95bb-b6be36aea15f": {
+            "type": "separator",
+            "settings": {
+              "title": "D"
+            }
+          },
+          "9cfa4b73-91bd-4935-b659-d102adc5a589": {
+            "type": "question",
+            "settings": {
+              "title": "DECYL GLUCOSIDE",
+              "answer": "<p><strong>INCI: Decyl Glucoside<\/strong><\/p><p>Tensioactivo natural no iónico derivado del aceite de coco y la glucosa.<\/p><p><strong>Beneficios<\/strong>: Se usa como tensioactivo suave en limpiadores, para que hagan espumita. Es muy suave y mantiene el equilibrio de la piel. Es respetuoso con el medioambiente y muy bien tolerado por todo tipo de pieles.<\/p>"
+            }
+          },
+          "ceadef31-f400-4e19-bb3d-d097dc08e43d": {
+            "type": "separator",
+            "settings": {
+              "title": "E"
+            }
+          },
+          "76822039-f258-40cb-90e5-03fb20051483": {
+            "type": "question",
+            "settings": {
+              "title": "EXTRACTO DE ALOE VERA",
+              "answer": "<p><strong>INCI: Aloe Barbadensis Leaf Extract<\/strong><\/p><p>El gel que contiene la planta se ha usado históricamente como remedio casero calmante para la piel. Este gel actúa creando un manto protector y refrescante que proporciona y retiene la humedad.<\/p><p><strong>Beneficios:<\/strong> Su poder astringente, hidratante, regenerante y antibacteriano lo hace un ingrediente muy interesante. Está especialmente indicado para pieles secas y agrietadas, ya que ayuda a mantener y calmar la función barrera de la piel. También es calmante en zonas con eritema, quemaduras y rojeces.<\/p>"
+            }
+          },
+          "e9c76e9e-2028-4f81-a5b1-3a45f8882bae": {
+            "type": "separator",
+            "settings": {
+              "title": "F"
+            }
+          },
+          "8ecd6b51-21fd-4577-a523-4d3ffa03a10d": {
+            "type": "question",
+            "settings": {
+              "title": "FOSFOLÍPIDOS",
+              "answer": "<p><strong>INCI: Phospholipids<\/strong><\/p><p>Se trata de un tipo de lípidos presentes en las células vegetales que se obtienen mediante procedimientos biotecnológicos a partir de la soja. <\/p><p><strong>Beneficios:<\/strong> Los fosfolípidos son componentes esenciales naturales de las membranas celulares y, por ese motivo, refuerzan la barrera cutánea cuando se los incluye en una formulación cosmética. También actúan como agentes hidratantes. En nuestro caso, están incluidos en el Sérum de retinol, ya que con este ingrediente hacemos las microcápsulas donde va encapsulado nuestro retinol puro. De esta forma, penetra mucho mejor, se preserva mejor en la fórmula – más estabilidad- y además hace que sea menos irritante.<\/p>"
+            }
+          },
+          "b4901ffb-1a94-4315-8bd3-d89d1fe35f46": {
+            "type": "separator",
+            "settings": {
+              "title": "G"
+            }
+          },
+          "271d40c1-d8eb-47ce-8e86-b79f507df84e": {
+            "type": "question",
+            "settings": {
+              "title": "GLUCONOLACTONE",
+              "answer": "<p><strong>INCI: Gluconolactone<\/strong><\/p><p>Se trata de un<strong> <\/strong>éster del ácido glucónico obtenido mediante biofermentación.<\/p><p><strong>Beneficios<\/strong>: La Gluconolactona es un ácido polihidroxiácido. A concentraciones mayores del 3% exfolia suavemente la piel. Tiene moléculas mayores que el ácido glicólico, por lo que penetra menos, e irrita menos. Esto permite usarlo en todo tipo de pieles. <\/p><p>La gluconolactona está compuesta por múltiples grupos hidroxilos que atraen el agua, lo que resulta en un importante aumento de la hidratación de la piel. En otras palabras, actúa como un maravilloso humectante también en pieles deshidratadas o secas.<\/p>"
+            }
+          },
+          "9fe8ea75-528a-43f6-a819-44a2819def9d": {
+            "type": "question",
+            "settings": {
+              "title": "GOMA XANTANA",
+              "answer": "<p><strong>INCI: Xanthan Gum<\/strong><\/p><p>Polisacárido natural de alto peso natural derivado de la fermentación de hidratos de carbono como la glucosa o el jarabe de maíz.<\/p><p><strong>Beneficios<\/strong>: Se utiliza como aglutinante, estabilizador de emulsiones y agente acondicionador de la piel en una amplia variedad de cosméticos y productos de cuidado personal. Un nivel del 1% de goma xantana se usa para formulaciones cosméticas, y también nos sirve para solubilizar ingredientes y darle consistencia a la fórmula. Mejora la textura.<\/p>"
+            }
+          },
+          "6cb9e5ca-66cc-4ad1-9381-c21978976f27": {
+            "type": "separator",
+            "settings": {
+              "title": "L"
+            }
+          },
+          "f8bcd28a-02b7-4e8e-acc3-769adc7ba930": {
+            "type": "question",
+            "settings": {
+              "title": "LACTIC ACID",
+              "answer": "<p><strong>INCI: Lactic Acid<\/strong><\/p><p>El ácido láctico se utiliza para regular el pH de los productos cosméticos. A altas concentraciones (mayores del 5%), es un gran exfoliante de la piel. Tiene una molécula mayor que el ácido glicólico, por lo que penetra menos, pero irritita menos.<\/p><p>Está indicado para todo tipo de pieles. <\/p>"
+            }
+          },
+          "72e80204-75c1-4ec6-84f5-3c23f7e154a2": {
+            "type": "separator",
+            "settings": {
+              "title": "M"
+            }
+          },
+          "b83e247a-3fe2-4321-ae7f-1a3e2eba777d": {
+            "type": "question",
+            "settings": {
+              "title": "MANTECA DE KARITÉ",
+              "answer": "<p><strong>INCI: Butyrosperum Parkii Butter<\/strong><\/p><p>Se obtiene del fruto del árbol africano karité (Vitellaria paradoxa) y proporciona numerosos beneficios a la piel y el cabello gracias a su composición rica en vitaminas (A, D, E y F) y minerales.<\/p><p><strong>Beneficios<\/strong>: Es un ingrediente que aporta una hidratación y nutrición intensa a la piel de larga duración. Es cicatrizante, relajante y aporta protección contra el frio. Se suele usar en pieles más secas o en el contorno de ojos.<\/p>"
+            }
+          },
+          "9826fcf3-ca40-434f-b208-462fc204e15f": {
+            "type": "separator",
+            "settings": {
+              "title": "S"
+            }
+          },
+          "63a23a83-b39b-4509-a215-546384c55985": {
+            "type": "question",
+            "settings": {
+              "title": "SILICA",
+              "answer": "<p><strong>INCI: Silica<\/strong><\/p><p>El dióxido de silicio (SiO2), conocido comúnmente con el nombre de silica, es uno de los componentes principales de la arena. Su origen es totalmente mineral y se obtiene, por ejemplo, de la purificación del cuarzo.<\/p><p><strong>Beneficios<\/strong>: Agente espesante que se utiliza en forma amorfa en los productos cosméticos. También es utilizado como anti-aglomerante o absorbente. En nuestro caso, la usamos para obtener la maravillosa textura de la Cloud Moisturizer, que además, es seborreguladora y matificante. Ideal para pieles grasas y con brillos.<\/p>"
+            }
+          },
+          "effecd49-c358-441f-a88d-83b41d8faa57": {
+            "type": "question",
+            "settings": {
+              "title": "SODIUM ANISATE",
+              "answer": "<p><strong>INCI: Sodium Anisate<\/strong><\/p><p>El Sodium Anisate es un conservante de origen 100% natural obtenido del anís y del hinojo.<\/p><p><strong>Beneficios:<\/strong> Es un conservante suave que ha demostrado tener una buena actividad antimicótica sin alterar la integridad, color ni pH de los otros ingredientes naturales que incluye el producto. Es un conservante súper suave que es apto para las pieles más sensibles.<\/p>"
+            }
+          },
+          "5fb6a96b-1587-4fe8-8002-e608c3953154": {
+            "type": "question",
+            "settings": {
+              "title": "SODIUM LEVULINATE",
+              "answer": "<p><strong>INCI: Sodium Levulinate<\/strong><\/p><p>El Sodium Levulinate es un conservante de origen 100% natural obtenido del almidón y la inulina vegetal.<\/p><p><strong>Beneficios:<\/strong> Es un conservante suave que ha demostrado controlar las colonias de microorganismos sin alterar la integridad, color ni pH de los otros ingredientes que incluye el producto. Es un conservante súper suave que es apto para las pieles más sensibles.<\/p>"
+            }
+          },
+          "41b53960-8808-49f3-913f-4eab9be7f75e": {
+            "type": "question",
+            "settings": {
+              "title": "SQUALANE (Escualano)",
+              "answer": "<p><strong>INCI: Squalane<\/strong><\/p><p>Es la versión hidrogenada del escualano. Es un triterpeno alifático extraído del salvado de arroz, el germen de trigo y las aceitunas verdes. Su origen es 100 % natural.<\/p><p><strong>Beneficios<\/strong>: Es un componente que ya encontramos de forma natural en la piel, emoliente y nutritivo para pieles secas. Tiene propiedades antioxidantes y es un maravilloso regenerador de la función barrera de la piel.<\/p>"
+            }
+          },
+          "e36414bd-8e83-437f-aa67-c54883cd64be": {
+            "type": "separator",
+            "settings": {
+              "title": "T"
+            }
+          },
+          "467f01e4-4f22-4e18-9c22-cf1a4cd507a7": {
+            "type": "question",
+            "settings": {
+              "title": "TÉ VERDE",
+              "answer": "<p><strong>INCI: Camellia Sinensis Leaf Extract<\/strong><\/p><p>Las hojas y trotes de Camellia Sinensis se utilizan par hacer té. Antiguamente provenía del sudeste de Asia y parte sur de China.<\/p><p>Se trata de un ingrediente muy antioxidante gracias a su contenido en polifenoles. Combate los radicales libres inducidos por las radiaciones UV. Actúa también como antiinflamatorio, inhibe la acción de la colagenasa, manteniendo la firmeza y elasticidad de la piel.<\/p>"
+            }
+          },
+          "58669f42-9c38-4712-bc5a-61783da9e2ec": {
+            "type": "question",
+            "settings": {
+              "title": "TOCOPHEROL",
+              "answer": "<p><strong>INCI: Tocopherol<\/strong><\/p><p>El tocoferol o vitamina E se encuentra de forma natural en grasas y aceites vegetales, cereales, frutos secos y verduras de hoja verde y amarilla.<\/p><p><strong>Beneficios: <\/strong>Se trata de un ingrediente muy antioxidante y también actúa como agente acondicionador de la piel. Es ideal para el cuidado de las pieles sensibles. Además, muchas veces lo utilizamos en las fórmulas para evitar que los otros ingredientes (como la vitamina C) se oxiden y se mantengan estables.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "page-faq-template-0",
+          "page-faq-template-1",
+          "page-faq-template-2",
+          "page-faq-template-3",
+          "aeb910e5-fef5-4bcf-8b30-67b322f3afa1",
+          "c58bd6a6-61ae-4a29-957b-a1609280299f",
+          "page-faq-template-4",
+          "page-faq-template-5",
+          "page-faq-template-6",
+          "cec56740-cfb9-405e-8ee0-65c23738c4b2",
+          "page-faq-template-7",
+          "page-faq-template-8",
+          "d95db841-649f-4208-acc9-b833d6f86146",
+          "43ff5829-37f2-4964-98d2-082606022447",
+          "0c169fce-c7ae-49d6-95bb-b6be36aea15f",
+          "9cfa4b73-91bd-4935-b659-d102adc5a589",
+          "ceadef31-f400-4e19-bb3d-d097dc08e43d",
+          "76822039-f258-40cb-90e5-03fb20051483",
+          "e9c76e9e-2028-4f81-a5b1-3a45f8882bae",
+          "8ecd6b51-21fd-4577-a523-4d3ffa03a10d",
+          "b4901ffb-1a94-4315-8bd3-d89d1fe35f46",
+          "271d40c1-d8eb-47ce-8e86-b79f507df84e",
+          "9fe8ea75-528a-43f6-a819-44a2819def9d",
+          "6cb9e5ca-66cc-4ad1-9381-c21978976f27",
+          "f8bcd28a-02b7-4e8e-acc3-769adc7ba930",
+          "72e80204-75c1-4ec6-84f5-3c23f7e154a2",
+          "b83e247a-3fe2-4321-ae7f-1a3e2eba777d",
+          "9826fcf3-ca40-434f-b208-462fc204e15f",
+          "63a23a83-b39b-4509-a215-546384c55985",
+          "effecd49-c358-441f-a88d-83b41d8faa57",
+          "5fb6a96b-1587-4fe8-8002-e608c3953154",
+          "41b53960-8808-49f3-913f-4eab9be7f75e",
+          "e36414bd-8e83-437f-aa67-c54883cd64be",
+          "467f01e4-4f22-4e18-9c22-cf1a4cd507a7",
+          "58669f42-9c38-4712-bc5a-61783da9e2ec"
+        ],
+        "settings": {}
+      },
+      "164608683265b1f4e7": {
+        "type": "custom-html",
+        "settings": {
+          "subheading": "",
+          "title": "",
+          "html": "<div class=\"klaviyo-form-VxtijP\"><\/div>"
+        }
+      },
+      "da352410-c766-4402-a788-3bc4d189b907": {
+        "type": "testimonials",
+        "blocks": {
+          "da352410-c766-4402-a788-3bc4d189b907-166613726750cc70fd-0": {
+            "type": "testimonial",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/D76A2A58-7489-488C-B4DD-9BDC4F9F8D9F.png",
+              "quote": "<p>“ Desde que uso este sérum con retinol, he dicho adiós a los granitos (y a la base de maquillaje) “<\/p>"
+            }
+          },
+          "da352410-c766-4402-a788-3bc4d189b907-166613726750cc70fd-1": {
+            "type": "testimonial",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/8FCF592C-1EA8-4E48-BF6F-530736B2B789.png",
+              "quote": "<p>“ Empecé a usar esta crema hidratante con niacinamida y mi piel no ha estado NUNCA tan suave. Avisamos: quizás la crema hidratante con niacinamida de Two Poles se convierta en tu favorita cuando la pruebes “<\/p>"
+            }
+          },
+          "da352410-c766-4402-a788-3bc4d189b907-166613726750cc70fd-2": {
+            "type": "testimonial",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/B8CAC66E-F7E5-496A-8F45-5D7F89A2546F.png",
+              "quote": "<p>“ <a href=\"https:\/\/www.mujerhoy.com\/belleza\/tratamientos\/serum-acido-azelaico-despigmentante-manchas-piel-cuidado-rostro-20220912142807-nt.html\" target=\"_blank\" title=\"https:\/\/www.mujerhoy.com\/belleza\/tratamientos\/serum-acido-azelaico-despigmentante-manchas-piel-cuidado-rostro-20220912142807-nt.html\">El<\/a> sérum con ácido azelaico que ya puedes usar y que te ayudará a decir adiós a las manchas “<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "da352410-c766-4402-a788-3bc4d189b907-166613726750cc70fd-0",
+          "da352410-c766-4402-a788-3bc4d189b907-166613726750cc70fd-1",
+          "da352410-c766-4402-a788-3bc4d189b907-166613726750cc70fd-2"
+        ],
+        "settings": {
+          "autoplay": true,
+          "cycle_speed": 5,
+          "background": "rgba(0,0,0,0)",
+          "text_color": "#1c1b1b"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "blocks": {
+          "7a4dab0a-7866-4317-a7c8-ad3b8815782b": {
+            "type": "related-product",
+            "settings": {
+              "related_product": "brightening-serum-sample"
+            }
+          },
+          "69b11dc4-bb8f-4bed-8987-f01446e5f21c": {
+            "type": "related-product",
+            "settings": {
+              "related_product": "cica-face-cream-sample"
+            }
+          },
+          "2c554a37-c6c4-49e8-be3a-0cf46ba2da1a": {
+            "type": "related-product",
+            "settings": {
+              "related_product": "cleansing-cream-sachet"
+            }
+          },
+          "35173c95-3cad-4da6-9445-60d36a72c28f": {
+            "type": "related-product",
+            "settings": {
+              "related_product": "cloud-moisturizer-sample"
+            }
+          },
+          "f317a81c-016f-4bb9-9f09-8ec63f47e4c8": {
+            "type": "related-product",
+            "settings": {
+              "related_product": "night-serum-sample"
+            }
+          },
+          "65df5623-e2fc-4c15-8983-5d14181e983f": {
+            "type": "related-product",
+            "settings": {
+              "related_product": "smart-eye-cream-sample"
+            }
+          },
+          "c3b1c650-d872-414a-8670-e5b004404c4c": {
+            "type": "related-product",
+            "settings": {
+              "related_product": "the-porefect-exfoliant-sample"
+            }
+          },
+          "6495a132-385a-4e6a-b0d1-7d19f78e2cec": {
+            "type": "suggestion-product",
+            "settings": {
+              "suggestion_product": "the-pack"
+            }
+          },
+          "aa4df9b1-4f8c-4b8b-acaf-c970a6d2a293": {
+            "type": "suggestion-product",
+            "settings": {
+              "suggestion_product": "cica-face-cream"
+            }
+          },
+          "ddb27812-e830-47c6-860f-037348e06329": {
+            "type": "suggestion-product",
+            "settings": {
+              "suggestion_product": "crema-hidratante-facial"
+            }
+          },
+          "85c93e75-fc50-4e6f-9e32-78eda081a3f4": {
+            "type": "suggestion-product",
+            "settings": {
+              "suggestion_product": "favorites-set"
+            }
+          }
+        },
+        "block_order": [
+          "7a4dab0a-7866-4317-a7c8-ad3b8815782b",
+          "69b11dc4-bb8f-4bed-8987-f01446e5f21c",
+          "2c554a37-c6c4-49e8-be3a-0cf46ba2da1a",
+          "35173c95-3cad-4da6-9445-60d36a72c28f",
+          "f317a81c-016f-4bb9-9f09-8ec63f47e4c8",
+          "65df5623-e2fc-4c15-8983-5d14181e983f",
+          "c3b1c650-d872-414a-8670-e5b004404c4c",
+          "6495a132-385a-4e6a-b0d1-7d19f78e2cec",
+          "aa4df9b1-4f8c-4b8b-acaf-c970a6d2a293",
+          "ddb27812-e830-47c6-860f-037348e06329",
+          "85c93e75-fc50-4e6f-9e32-78eda081a3f4"
+        ],
+        "custom_css": [],
+        "settings": {
+          "show_shipping_estimator": true,
+          "shipping_estimator_default_country": "Spain",
+          "sample_heading": "psst antes de terminar, elige tus dos muestras gratis :)",
+          "heading": "QUIZÁS TE PUEDE GUSTAR TAMBIÉN..."
+        }
+      },
+      "e959c124-ade5-4b92-83e6-203658277745": {
+        "type": "new-slideshow",
+        "blocks": {
+          "8a911dd0-0455-4cdd-b41c-668c9e533ee3": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "banner_video_url": "shopify:\/\/collections\/all",
+              "image": "shopify:\/\/shop_images\/BANNERS_horitzontal_web_10.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/banner_mobile_web_3.png",
+              "apply_overlay": true,
+              "content_position": "bottomRight",
+              "subheading": "NEW IN",
+              "title": "THE EYECONIC CREAM",
+              "button_1_text": "DESCUBRIR",
+              "button_1_link": "shopify:\/\/products\/the-eyeconic-cream",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "28101b6e-e665-4ec9-967f-b4809941f58d": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "banner_video_url": "",
+              "image": "shopify:\/\/shop_images\/BANNERS_horitzontal_web_9.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/banner_mobile_web_2.png",
+              "apply_overlay": true,
+              "content_position": "bottomRight",
+              "subheading": "",
+              "title": "",
+              "button_1_text": "¡no me lo pierdo!",
+              "button_1_link": "shopify:\/\/collections\/cosmetics",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "870fe40b-393c-4997-a0be-52d5c99d76d6": {
+            "type": "image",
+            "settings": {
+              "banner_video_url": "",
+              "image": "shopify:\/\/shop_images\/BANNERS_horitzontal_web_19.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/banner_mobile_web_7.png",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "",
+              "button_1_text": "COMPRAR",
+              "button_1_link": "https:\/\/twopoles.co\/collections\/cosmetics",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "e959c124-ade5-4b92-83e6-203658277745-image-2": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "banner_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d8ce6c22bc12463c9b4cff2eef664ee5.mp4",
+              "image": "shopify:\/\/shop_images\/BANNERS_horitzontal_web_18.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/banner_mobile_web_15.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomRight",
+              "subheading": "MARCAS DE ACNÉ, GRANITOS Y MANCHAS",
+              "title": "BRIGHTENING SERUM",
+              "button_1_text": "ver más",
+              "button_1_link": "shopify:\/\/products\/brightening-serum",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "8a911dd0-0455-4cdd-b41c-668c9e533ee3",
+          "28101b6e-e665-4ec9-967f-b4809941f58d",
+          "870fe40b-393c-4997-a0be-52d5c99d76d6",
+          "e959c124-ade5-4b92-83e6-203658277745-image-2"
+        ],
+        "settings": {
+          "show_fullscreen": true,
+          "show_arrow": false,
+          "autoplay": true,
+          "cycle_speed": 5,
+          "text_color": "#ffffff",
+          "button_color": "#363636",
+          "button_background": "#ffffff"
+        }
+      },
+      "74bc042e-20db-4af5-a860-d5ee3e7b063d": {
+        "type": "discover-our-routines",
+        "blocks": {
+          "347f2960-3bbb-4b29-8f65-86e96fbcb372": {
+            "type": "category",
+            "settings": {
+              "collection_link": "shopify:\/\/collections\/limpiadores-faciales",
+              "collection_img": "shopify:\/\/shop_images\/1_6070af06-00bb-4c7f-b7a0-ec3625afdb7f.png",
+              "collection_title": "Paso 1. Limpiadores"
+            }
+          },
+          "9f3f59ca-0928-4d2e-a74a-7b94df3d0f81": {
+            "type": "category",
+            "settings": {
+              "collection_link": "shopify:\/\/products\/smart-eye-cream",
+              "collection_img": "shopify:\/\/shop_images\/4_d126863e-0e4d-4324-8534-74681647df05.png",
+              "collection_title": "Paso 2. Contorno de ojos"
+            }
+          },
+          "9a311e61-1bd4-4d61-add5-0da44ae0e36c": {
+            "type": "category",
+            "settings": {
+              "collection_link": "shopify:\/\/collections\/tonicos-faciales-peelings-quimicos",
+              "collection_img": "shopify:\/\/shop_images\/2_2a897174-edea-4f6c-a73c-bc96413fa179.png",
+              "collection_title": "Paso 3. Exfoliantes"
+            }
+          },
+          "86014d7c-c8ec-4568-a7d1-fc27b1f1c311": {
+            "type": "category",
+            "settings": {
+              "collection_link": "shopify:\/\/collections\/serums-faciales",
+              "collection_img": "shopify:\/\/shop_images\/5_025bab8f-043c-412d-aa3c-fe1abb0aa8bd.png",
+              "collection_title": "Paso 4. Serums tratamiento"
+            }
+          },
+          "03d9c1f6-3af8-42bf-9c55-d5e46277a38c": {
+            "type": "category",
+            "settings": {
+              "collection_link": "shopify:\/\/collections\/hidratantes-faciales",
+              "collection_img": "shopify:\/\/shop_images\/3_38d5abc0-a8d0-4ac7-b315-59c4deefbaba.png",
+              "collection_title": "Paso 5. Hidratación + labios"
+            }
+          },
+          "f3ec2034-5989-45dc-9bca-46b10050f4b5": {
+            "type": "category",
+            "disabled": true,
+            "settings": {
+              "collection_link": "shopify:\/\/collections\/hidratantes-faciales",
+              "collection_img": "shopify:\/\/shop_images\/cleansers.png",
+              "collection_title": "Home And lifestyle"
+            }
+          },
+          "f33e36a6-a6c4-40a6-94fd-ebc21a2a9ddb": {
+            "type": "category",
+            "disabled": true,
+            "settings": {
+              "collection_link": "shopify:\/\/collections\/lifestyle",
+              "collection_img": "shopify:\/\/shop_images\/cleansers.png",
+              "collection_title": "Granitos e imperfecciones"
+            }
+          }
+        },
+        "block_order": [
+          "347f2960-3bbb-4b29-8f65-86e96fbcb372",
+          "9f3f59ca-0928-4d2e-a74a-7b94df3d0f81",
+          "9a311e61-1bd4-4d61-add5-0da44ae0e36c",
+          "86014d7c-c8ec-4568-a7d1-fc27b1f1c311",
+          "03d9c1f6-3af8-42bf-9c55-d5e46277a38c",
+          "f3ec2034-5989-45dc-9bca-46b10050f4b5",
+          "f33e36a6-a6c4-40a6-94fd-ebc21a2a9ddb"
+        ],
+        "custom_css": [],
+        "settings": {
+          "heading": "tu rutina paso a paso"
+        }
+      },
+      "featured-collection-pro": {
+        "type": "featured-collection-pro",
+        "blocks": {
+          "collection_gWUkHa": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "title": "",
+              "grid_items_count": 4,
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "collection_gWUkHa"
+        ],
+        "settings": {
+          "title": "",
+          "layout_mode": "carousel",
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false,
+          "grid_mobile_items_per_row": "2",
+          "grid_desktop_items_per_row": 4
+        }
+      },
+      "product-related": {
+        "type": "product-related",
+        "settings": {
+          "show_section": true,
+          "title": "Recently viewed",
+          "show_product_info": true,
+          "show_vendor": true,
+          "show_color_swatch": true
+        }
+      },
+      "sold-out": {
+        "type": "sold-out",
+        "settings": {
+          "enable_bar": true,
+          "product": "",
+          "home_page_only": false,
+          "background": "#ffffff",
+          "text_color": "#060606",
+          "content": "",
+          "link": ""
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "e959c124-ade5-4b92-83e6-203658277745",
+      "74bc042e-20db-4af5-a860-d5ee3e7b063d",
+      "featured-collections",
+      "timeline",
+      "da352410-c766-4402-a788-3bc4d189b907",
+      "collection-list",
+      "1638981883cad1d5e2",
+      "1642977627cbcce78a",
+      "featured-product",
+      "blog-posts",
+      "1638980730764d2b46",
+      "16389807096ba8e58c",
+      "1642975280d77c04c3",
+      "1642936780a5db7f30",
+      "1644931583c369a428",
+      "164608683265b1f4e7"
+    ],
+    "blocks": {
+      "2153490007123654574": {
+        "type": "shopify:\/\/apps\/gdpr-ccpa-cookie-management\/blocks\/gdpr_cookie_consent\/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": true,
+        "settings": {}
+      },
+      "11105581477831763250": {
+        "type": "shopify:\/\/apps\/ga-free-gift-buy-x-get-y-bogo\/blocks\/app-embeded\/624007ce-b7ae-460f-9bb2-c6b59ecf9add",
+        "disabled": true,
+        "settings": {}
+      },
+      "6174324309569838175": {
+        "type": "shopify:\/\/apps\/smile-loyalty-rewards\/blocks\/smile-shopify-app\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "12120936241911852800": {
+        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/reviews_tab\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "right"
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Allure": {
+      "heading_color": "#1c1b1b",
+      "text_color": "#1c1b1b",
+      "text_light_color": "#6a6a6a",
+      "link_color": "#6a6a6a",
+      "background": "#efefef",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#1c1b1b",
+      "button_text_color": "#ffffff",
+      "header_background": "#ffffff",
+      "header_heading_color": "#1c1b1b",
+      "header_light_color": "#6a6a6a",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#1c1b1b",
+      "footer_text_color": "#6a6a6a",
+      "newsletter_popup_background": "#1c1b1b",
+      "newsletter_popup_text_color": "#ffffff",
+      "secondary_elements_background": "#1c1b1b",
+      "secondary_elements_text_color": "#ffffff",
+      "navigation_background": "#1c1b1b",
+      "navigation_text_color": "#ffffff",
+      "heading_font": "montserrat_n5",
+      "heading_size": "small",
+      "uppercase_heading": true,
+      "text_font": "nunito_sans_n4",
+      "base_text_font_size": 14,
+      "show_page_transition": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": false,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "center",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "medium",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "center",
+      "checkout_logo_size": "small",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#efefef",
+      "checkout_accent_color": "#1c1b1b",
+      "checkout_button_color": "#1c1b1b",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#000000",
+            "text_color": "#ffffff",
+            "content": "Announce something here"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "inline",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "image_size": "large",
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    },
+    "Couture": {
+      "heading_color": "#5c5c5c",
+      "text_color": "#5c5c5c",
+      "text_light_color": "#939393",
+      "link_color": "#323232",
+      "background": "#ffffff",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#5c5c5c",
+      "button_text_color": "#ffffff",
+      "header_background": "#ffffff",
+      "header_heading_color": "#5c5c5c",
+      "header_light_color": "#939393",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#5c5c5c",
+      "footer_text_color": "#939393",
+      "newsletter_popup_background": "#ffffff",
+      "newsletter_popup_text_color": "#1c1b1b",
+      "secondary_elements_background": "#5c5c5c",
+      "secondary_elements_text_color": "#ffffff",
+      "navigation_background": "#ffffff",
+      "navigation_text_color": "#5c5c5c",
+      "heading_font": "futura_n4",
+      "heading_size": "large",
+      "uppercase_heading": false,
+      "text_font": "century_gothic_n4",
+      "base_text_font_size": 15,
+      "show_page_transition": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": true,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "left",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "small",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "center",
+      "checkout_logo_size": "small",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_accent_color": "#323232",
+      "checkout_button_color": "#5c5c5c",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#f3f3f3",
+            "text_color": "#5c5c5c",
+            "content": "Announce something here"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "center",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "image_size": "large",
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    },
+    "Vogue": {
+      "heading_color": "#303030",
+      "text_color": "#303030",
+      "text_light_color": "#595959",
+      "link_color": "#000000",
+      "background": "#ffffff",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#f5db8b",
+      "button_text_color": "#303030",
+      "header_background": "#ffffff",
+      "header_heading_color": "#303030",
+      "header_light_color": "#595959",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#303030",
+      "footer_text_color": "#595959",
+      "navigation_background": "#ffffff",
+      "navigation_text_color": "#303030",
+      "newsletter_popup_background": "#ffffff",
+      "newsletter_popup_text_color": "#303030",
+      "secondary_elements_background": "#fce7a8",
+      "secondary_elements_text_color": "#303030",
+      "heading_font": "din_neuzeit_grotesk_n3",
+      "heading_size": "small",
+      "uppercase_heading": true,
+      "text_font": "futura_n4",
+      "base_text_font_size": 14,
+      "show_page_transition": false,
+      "show_element_staggering": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": true,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "center",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "medium",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_accent_color": "#a17c5e",
+      "checkout_button_color": "#454545",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#f1e4d8",
+            "text_color": "#343434",
+            "content": "Announce something here"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "inline",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "button_text": "View products",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "image_size": "large",
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    }
+  },
+  "platform_customizations": {
+    "custom_css": []
+  }
+}

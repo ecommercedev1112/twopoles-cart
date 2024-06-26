@@ -1,0 +1,117 @@
+<script>
+    {%- assign products = settings.freegifts -%}
+        const gifts = {
+            {%- for product in products %}
+            {%  assign nextProduct = products[forloop.index] %}
+            {{ product.metafields.custom.free_gift_target.value | plus:0 | times: 100 }}: { 
+                variantId: '{{ product.selected_or_first_available_variant.id }}', 
+                nextLevel: {% if forloop.last %}null{% else %}{{ nextProduct.metafields.custom.free_gift_target.value | plus:0 | times: 100 }}{% endif %} 
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor -%}
+        };
+        function removeGifts(cart, giftVariantIdToRemove) {
+            $(cart.items).each(function(index, item) {
+                // Check if the item is the specific gift to remove
+                if (item.id == giftVariantIdToRemove) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/cart/change.js',
+                        data: { quantity: 0, id: item.id },
+                        dataType: 'json',
+                        success: function(response) {
+                          updateCart();
+                        },
+                        error: function() {
+                            // Handle error
+                        }
+                    });
+                }
+            });
+        }
+        function addGift(variantId) {
+            jQuery.post('/cart/add.js', {
+                quantity: 1,
+                id: variantId
+            }).done(function() {
+                updateCart();
+            }).fail(function() {
+                // Handle errors
+            });
+        }
+        function isGiftInCart(cartItems) {
+            // Check if a gift is already in the cart
+            let giftInCart = false;
+            $(cartItems).each(function(index, item) {
+                Object.values(gifts).forEach(gift => {
+                    if (gift.variantId == item.id) {
+                        giftInCart = true;
+                    }
+                });
+            });
+            return giftInCart;
+        }
+        function allGiftsRemoved(items) {
+            return !isGiftInCart(items);
+        }
+
+        
+        function isGiftItem(item) {
+            return Object.values(gifts).some(gift => gift.variantId === item.id);
+        }
+
+        function updateGift(e) {
+          console.log(e);
+          let cart = e ? e.detail.cart : {{ cart | json }};
+          if (!cart) return; // Exit if no cart object
+      
+          // Check if there are non-gift items in the cart
+          let nonGiftItemsExist = cart && cart.items && cart.items.some(item => {
+  return !isGiftItem(item);
+});
+
+      
+          if (!nonGiftItemsExist) {
+              // Remove all gifts if there are no non-gift items in the cart
+              let delay = 0; // Initialize delay counter
+            if(cart && Array.isArray(cart.items)) {
+              cart.items.forEach(item => {
+                  if (isGiftItem(item)) {
+                      setTimeout(() => removeGifts(cart, item.variant_id), delay);
+                      delay += 500; // Increment delay for each item (500ms in this example)
+                  }
+              });
+              }
+          } else {
+              // Manage gifts based on cart total
+              let delay = 0; // Initialize delay counter
+              Object.keys(gifts).forEach(level => {
+                  let gift = gifts[level];
+                  setTimeout(() => { // Use setTimeout to introduce delay
+                      if (cart.original_total_price >= level) {
+                          if (!isTargetGiftInCart(cart.items, gift.variantId)) {
+                              addGift(gift.variantId);
+                          }
+                      } else {
+                          if (isTargetGiftInCart(cart.items, gift.variantId)) {
+                              removeGifts(cart, gift.variantId);
+                          }
+                      }
+                  }, delay);
+                  delay += 500; // Increment delay for each item (adjust time as needed)
+              });
+          }
+
+      }
+
+      // Utility function to check if the target gift is already in the cart
+      function isTargetGiftInCart(cartItems, targetVariantId) {
+          let targetGiftInCart = false;
+          $(cartItems).each(function(index, item) {
+              if (item.id == targetVariantId) {
+                  targetGiftInCart = true;
+              }
+          });
+          return targetGiftInCart;
+      }
+  $(document).on('cart:change', updateGift);
+</script>

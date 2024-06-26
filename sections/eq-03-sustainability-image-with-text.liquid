@@ -1,0 +1,113 @@
+{% for block in section.blocks %}
+{% if block.type == 'image-with-text' %}
+<section class="philosophy-packaging pt-40"> 
+    <div class="c-container">
+        <div class="philosophy-packaging__wrap">
+            {% if block.settings.image != blank %}
+            <figure class="philosophy-packaging__image">
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+            </figure>
+            {% endif %}
+            <div class="philosophy-packaging__content">
+                <h2>{{ block.settings.heading }}</h2>
+                <div class="desc-text">
+                    {{block.settings.text}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="philosophy-packaging"> 
+    <div class="c-container">
+        <div class="philosophy-packaging__wrap reverse">
+            <figure class="philosophy-packaging__image">
+                {% if block.settings.video_url != blank %}
+                <video width="100%" height="100%" muted="" playsinline="" loop="" autoplay="" class="sustainability-video play">
+                    <source src="{{ block.settings.video_url }}" type="video/mp4">
+                </video>
+                <div class="icon-play-pause-btn">
+                    <a href="javascript:void(0)" class="icon-play">
+                        <img src="{{ 'icon-video-play.png' | file_img_url: 'master' }}" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="icon-pause">
+                        <img src="{{ 'video-pause.png' | file_img_url: 'master' }}" alt="">
+                    </a>
+                </div>
+                {% endif %}
+            </figure>
+            <div class="philosophy-packaging__content">
+                <h2>{{block.settings.heading}}</h2>
+                <div class="desc-text">
+                    {{block.settings.text}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endfor %}
+
+{% schema %}
+{
+    "name":"EQ Image With Text",
+    "settings":[
+       
+    ],
+    "presets":[
+       {
+          "name":"EQ Sustainability Image With Text"
+       }
+    ],
+    "blocks":[
+       {
+          "type":"image-with-text",
+          "name":"Image With Text",
+          "settings":[
+             {
+                "type":"image_picker",
+                "id":"image",
+                "label":"Image"
+             },
+             {
+                "type":"textarea",
+                "id":"heading",
+                "label":"Heading"
+             },
+             {
+                "type":"richtext",
+                "id":"text",
+                "label":"Text"
+             }
+          ]
+       },
+       {
+        "type":"video-with-text",
+        "name":"Video With Text",
+        "settings":[
+           {
+              "type":"url",
+              "id":"video_url",
+              "label":"Video URL"
+           },
+           {
+              "type":"textarea",
+              "id":"heading",
+              "label":"Heading"
+           },
+           {
+              "type":"richtext",
+              "id":"text",
+              "label":"Text"
+           }
+        ]
+     }
+    ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

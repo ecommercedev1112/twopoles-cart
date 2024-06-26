@@ -1,0 +1,399 @@
+{%- assign CartCount = cart.item_count -%}
+{% assign giftInCart = false %}
+{%- for line_item in cart.items -%}
+    {%- if line_item.product.id == section.settings.freeGift.id -%}
+      {%- assign variantTitle = line_item.variant.title -%}
+      {% assign giftInCart = true %}
+      {% break %}
+    {%- endif -%}         
+{%- endfor -%}
+{%- if giftInCart -%}
+  {%- assign CartCount = cart.item_count | minus: 1 -%}
+{%- endif -%}
+{%- capture section_settings -%}
+{
+  "type": {{ settings.cart_type | json }},
+  "itemCount": {{ cart.item_count }},
+  "drawer": true,
+  "hasShippingEstimator": false
+}
+{%- endcapture -%}
+{% assign cartTotalPrice = cart.total_price %}
+<div id="sidebar-cart" class="Drawer Drawer--fromRight" aria-hidden="true" data-section-id="cart" data-section-type="cart" data-section-settings='{{ section_settings }}'>
+  <script>
+    
+    var per = parseFloat($(".js-cart-progress-main-per").attr("data-percent"));
+    $(".js-cart-progress-main-per").css({
+            "width": per + "%"
+        });
+  </script>
+  
+  <div class="Drawer__Header Drawer__Header--bordered Drawer__Container">
+      <span class="Drawer__Title Heading u-h4">{{ 'cart.general.title' | t }}</span>
+
+      <button class="Drawer__Close Icon-Wrapper--clickable" data-action="close-drawer" data-drawer-id="sidebar-cart" aria-label="{{ 'header.navigation.close_cart' | t }}">
+        {%- render 'icon' with 'close' -%}
+      </button>
+  </div>
+
+  {%- if settings.cart_show_free_shipping -%}
+      {%- render 'free-shiping-bar', product: settings.freegift -%}
+  {%- endif -%}
+
+  
+
+  <form class="Cart Drawer__Content js_cart_drawer" action="{{ routes.cart_url }}" method="POST" novalidate>
+    <div class="Drawer__Main" data-scrollable>
+      {% comment %}{%- if settings.cart_show_free_shipping_threshold -%}
+        {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+
+        <div class="Cart__ShippingNotice Text--subdued">
+          <div class="Drawer__Container">
+            {%- if cart.total_price >= threshold_in_cents -%}
+              <p>{{- 'cart.general.free_shipping' | t -}}</p>
+            {%- else -%}
+              {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+              <p>{{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}</p>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}{% endcomment %}
+
+      {%- if cart.item_count == 0 -%}
+        <p class="Cart__Empty Heading u-h5">{{ 'cart.general.empty' | t }}</p>
+      {%- else -%}
+        <div class="Drawer__Container">
+          <input type="hidden" name="attributes[collection_mobile_items_per_row]" value="">
+          <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
+
+          {% render 'cart-items' %}
+        </div> 
+        <div class="cart-tab-wrap">
+      {% comment %}
+          <div class="cart-tab-header">
+            <ul class="cart-tabs">
+        {% comment %}
+              {% if settings.tab1_heading != '' %}
+                <li class="cart-tab-link active" data-tab="1">{{settings.tab1_heading}}</li>
+              {% endif %}  
+        {% endcomment %}
+              {% if settings.tab2_heading != '' %}
+                <li class="cart-tab-link active" id="related" data-tab="2">{{settings.tab2_heading}}</li>
+              {% endif %}
+            </ul>
+          </div>
+      {% endcomment %}
+          <div class="cart-content-wrapper">
+           
+            <div id="cart-tab-1" class="cart-tab-content active">
+              <div class="you-may-also-like cart-drawer-slider-wrap">
+                <div class="container">
+                  <div class="section-title">
+                    <h2>{{ settings.free_sapmle_heading }}</h2>
+                  </div>
+                  <div class="section-content cart-drawer-slider"> 
+                 {% for item in cart.items %}
+                  {% assign upsell_product_array = upsell_product_array | append:item.id | append:',' %}
+                  {% endfor %}
+                  {% unless upsell_product_array contains product.selected_or_first_available_variant.id %}
+                
+                    {% for i in (1..7) %}
+                     
+                    {% assign pro_id = 'product' | append:i %}
+                     
+                    {% assign product = all_products[settings[pro_id]] %}
+                    <div class="slide" data-prodsuggest="{{product.id}}"  data-upsell-product="{{product.title}}" >
+                      <div class="box js-pro" {{ upsell_product_array | size }}>
+                      
+                        <figure>
+                          <a href="{{ product.url }}">
+                            <img
+                              src="{{ product.featured_image | img_url : 'master' }}"
+                              alt="">
+                          </a>
+                        </figure>
+                          
+                        <h6>
+                          <a href="{{ product.url }}"> {{ product.title }}</a>
+                        </h6>
+                        {% if upsell_product_array contains product.selected_or_first_available_variant.id %}
+                      <a href="javascript:void(0)" class="btn-quick-shop drawer-free-sample-atc js-pro-selected" id="jssamplerem"  data-var-id="{{  product.selected_or_first_available_variant.id }}" data-qty="1">
+                        ELIMINAR</a>
+                          {% else %}
+                      <a href="javascript:void(0)" class="btn-quick-shop drawer-free-sample-atc " id="choose-sample-pro"  data-var-id="{{  product.selected_or_first_available_variant.id }}" data-qty="1">
+                        AÑADIR</a>
+                          {% endif %}
+                        
+                      </div>
+                    </div>
+                     {% endfor %}
+                 {% endunless %}
+                  </div>
+                </div>
+              </div>  
+            </div>
+
+
+
+            
+            <div id="cart-tab-2" class="cart-tab-content active">
+              <div class="you-may-also-like cart-drawer-slider-wrap">
+                <div class="container">
+                  <div class="section-title">
+                    <h2>{{ settings.sugg_heading }}</h2>
+                  </div>
+                  <div class="section-content cart-drawer-slider">
+                  
+                     
+                  {% for item in cart.items %}
+                  {% assign upsell_product_array = upsell_product_array | append:item.id | append:',' %}
+                  {% endfor %}
+                  {% unless upsell_product_array contains product.selected_or_first_available_variant.id %}
+                   {% for i in (8..14) %}
+                    {% assign pro_id = 'product' | append:i %}
+                    {% assign product = all_products[settings[pro_id]] %}
+                     {%- if product != blank -%}
+                    <div class="slide" data-prodsuggest="{{product.id}}" data-upsell-product="{{product.title}}">
+                      <div class="box js-pro">
+                        
+                        <figure>
+                          <a href="{{ product.url }}">
+                            <img
+                              src="{{ product.featured_image | img_url : 'master' }}"
+                              alt="">
+                          </a>
+                        </figure>
+                         
+                        <h6>
+                          <a href="{{ product.url }}"> {{ product.title }}</a>
+                        </h6>
+                               <span class="product-price">
+                              {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                                <del>
+                                  {{ product.selected_or_first_available_variant.compare_at_price | money }}</del>
+                              {% endif %}
+                              {{ product.selected_or_first_available_variant.price | money }}
+                            </span>
+                        <a href="javascript:void(0)" class="btn-quick-shop drawer-related-atc" data-var-id="{{ product.selected_or_first_available_variant.id }}" data-qty="1">AÑADIR</a>
+                        <a href="{{ product.url }}" class="link-view-product">ver producto </a>
+                      </div>
+                    </div>
+                     {% endif %}
+              {% endfor %}
+              {% endunless %}
+                  </div>
+                </div>
+              </div>              
+            </div>
+            
+          </div>
+          
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="grid--full" id="mrk-cart-gift-info">
+      {%- if giftInCart -%}
+        <span tabindex="0" class="px-0">Free Gift - {{ variantTitle }} :</span>
+        <span tabindex="0" class="text-right px-0">FREE</span>
+      {%- endif -%}
+    </div>
+    {%- unless cart.item_count == 0 -%}
+      <div class="Drawer__Footer" data-drawer-animated-bottom>
+
+        {% comment %} 
+        <div class="you-may-also-like cart-drawer-slider-wrap">
+          <div class="container">
+            <div class="section-title">
+              <h2>{{ settings.free_sapmle_heading }}</h2>
+            </div>
+            <div class="section-content js-cart-drawer-slider"> 
+              {% assign disCount = 0 %}
+              {% assign counter = 0 %}
+              
+              {% for item in cart.items %}
+                {% assign upsell_product_array = upsell_product_array | append:item.id | append:',' %}
+              {% endfor %}
+              
+              {% for i in (1..7) %}
+              {% assign pro_id = 'product' | append:i %}
+              {% assign product = all_products[settings[pro_id]] %}
+         
+                {% if upsell_product_array contains product.selected_or_first_available_variant.id %}
+                  {% assign counter = counter | plus: 1 %}
+                {% endif %}
+              {% endfor %}
+              {% assign disCount = counter %}
+
+           {% for item in cart.items %}
+            {% assign upsell_product_array = upsell_product_array | append:item.id | append:',' %}
+            {% endfor %}
+            {% unless upsell_product_array contains product.selected_or_first_available_variant.id %}
+          
+              {% for i in (1..7) %}
+               
+              {% assign pro_id = 'product' | append:i %}
+               
+              {% assign product = all_products[settings[pro_id]] %}
+              <div class="slide" data-prodsuggest="{{product.id}}"  data-upsell-product="{{product.title}}" >
+                <div class="box js-pro" {{ upsell_product_array | size }}>
+                
+                  <figure>
+                    <a href="{{ product.url }}">
+                      <img
+                        src="{{ product.featured_image | img_url : 'master' }}"
+                        alt="">
+                    </a>
+                  </figure>
+                    
+                  <div>
+                      <h6>
+                        <a href="{{ product.url }}"> {{ product.title }}</a>
+                      </h6>
+                      {% if upsell_product_array contains product.selected_or_first_available_variant.id %}
+                        <a href="javascript:void(0)" class="btn-quick-shop js-drawer-free-sample-atc js-pro-selected js-sample-drawer-rem" id="jssamplerem"  data-var-id="{{  product.selected_or_first_available_variant.id }}" data-qty="1">ELIMINAR</a>
+                      {% else %}
+                        <a href="javascript:void(0)" class="btn-quick-shop drawer-free-sample-atc {% if disCount == 1 and cart.total_price < 3000 %} btn-dissble {% elsif disCount == 2 and cart.total_price > 3000 %} btn-dissble {% elsif disCount == 2 and cart.total_price < 3000 %} btn-dissble {% endif %}" data-added-count="{{disCount}}" id="choose-sample-pro" {% if disCount == 1 and cart.total_price < 3000 %} {% elsif disCount == 2 and cart.total_price > 3000 %} {% elsif disCount == 2 and cart.total_price < 3000 %} {% else %} data-var-id="{{  product.selected_or_first_available_variant.id }}" {% endif %} data-qty="1">AÑADIR</a>
+                      {% endif %}
+                  </div>
+                  
+                </div>
+              </div>
+               {% endfor %}
+           {% endunless %}
+            </div>
+          </div>
+        </div>
+       {% endcomment %}
+        {% comment %}
+        <div class="you-may-also-like cart-drawer-slider-wrap second-slider-wraper">
+          <div class="container">
+            <div class="section-title">
+              <h2>{{ settings.sugg_heading }}</h2>
+            </div>
+            <div class="section-content js-cart-drawer-slider">
+            
+               
+            {% for item in cart.items %}
+            {% assign upsell_product_array = upsell_product_array | append:item.id | append:',' %}
+            {% endfor %}
+            {% unless upsell_product_array contains product.selected_or_first_available_variant.id %}
+             {% for i in (8..14) %}
+              {% assign pro_id = 'product' | append:i %}
+              {% assign product = all_products[settings[pro_id]] %}
+               {%- if product != blank -%}
+              <div class="slide" data-prodsuggest="{{product.id}}" data-upsell-product="{{product.title}}">
+                <div class="box js-pro">
+                  
+                  <figure>
+                    <a href="{{ product.url }}">
+                      <img
+                        src="{{ product.featured_image | img_url : 'master' }}"
+                        alt="">
+                    </a>
+                  </figure>
+                  <div>
+                    <div class="heading-title-width-price">
+                      <h6>
+                        <a href="{{ product.url }}"> {{ product.title }}</a>
+                      </h6>
+                      <span class="product-price">
+                            {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                              <del>
+                                {{ product.selected_or_first_available_variant.compare_at_price | money }}</del>
+                            {% endif %}
+                            {{ product.selected_or_first_available_variant.price | money }}
+                      </span>
+                    </div> 
+                    <div>
+                      <a href="javascript:void(0)" class="btn-quick-shop cart-atc-btn cart-atc-btn--border" data-var-id="{{ product.selected_or_first_available_variant.id }}" data-qty="1">AÑADIR</a>
+                      <a href="{{ product.url }}" class="link-view-product">Ver producto </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               {% endif %}
+        {% endfor %}
+        {% endunless %}
+            </div>
+          </div>
+        </div>       
+         {% endcomment %}
+        
+        {% unless upsell_product_array contains settings.gift_product.selected_or_first_available_variant.id %}
+        {% if settings.show_wrap_for_gift %}
+         <a href="javascript:;" class="btn-gift-wrap js-btn-gift-wrap">
+            <h5><img src="{{'gift-packaging.jpg' | file_img_url: '34x34'}}" class="" /> Lo quiero para regalo</h5>
+            <span>añadir +1€</span>
+        </a>
+        {% endif %}
+        {% endunless %}
+        {%- capture shipping_and_taxes_notice -%}{{ 'cart.general.shipping_and_taxes_notice' | t }}{%- endcapture -%}
+
+        {%- if settings.cart_enable_notes or shipping_and_taxes_notice != blank -%}
+          {%- if settings.cart_enable_notes -%}
+            {% comment %}
+            {%- if cart.note == blank -%}
+              <button type="button" class="Cart__NoteButton" data-action="toggle-cart-note">{{ 'cart.general.add_note' | t }}</button>
+            {%- else -%}
+              <button type="button" class="Cart__NoteButton" data-action="toggle-cart-note">{{ 'cart.general.edit_note' | t }}</button>
+            {%- endif -%}
+            {% endcomment %}
+          {%- endif -%}
+
+          {%- if shipping_and_taxes_notice != blank -%}
+            <p class="Cart__Taxes Text--subdued">{{ shipping_and_taxes_notice }}</p>
+          {%- endif -%}
+
+          {%- if cart.cart_level_discount_applications != blank -%}
+            {%- for discount_application in cart.cart_level_discount_applications -%}
+              <p class="Cart__Discount">{%- render 'icon' with 'sale' -%} {{ 'cart.general.discount' | t }} ({{ discount_application.title }}): -<span>{{ discount_application.total_allocated_amount | money_without_trailing_zeros }}</span></p>
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        <button type="submit" name="checkout" class="Cart__Checkout Button Button--primary Button--full js_cart--checkout">
+          <span>{{- 'cart.general.checkout' | t -}}</span>
+          <span class="Button__SeparatorDot"></span>
+          <span>{{ cart.total_price | money_without_trailing_zeros }}</span>
+        </button>
+
+        {%- if settings.cart_enable_notes -%}
+          {% comment %}
+          <div class="Cart__OffscreenNoteContainer" aria-hidden="true">
+            {%- if cart.note == blank -%}
+              <span class="Cart__NoteButton">{{ 'cart.general.add_note' | t }}</span>
+            {%- else -%}
+              <span class="Cart__NoteButton">{{ 'cart.general.edit_note' | t }}</span>
+            {%- endif -%}
+
+            <div class="Form__Item">
+              <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="3" placeholder="{{ 'cart.general.note_placeholder' | t }}" data-scrollable>{{ cart.note }}</textarea>
+            </div>
+
+            <button type="button" class="Button Button--primary Button--full" data-action="toggle-cart-note">{{ 'cart.general.save_note' | t }}</button>
+          </div>
+          {% endcomment %}
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+    <div class="gift-wraper">
+      <a href="javascript:;" class="gift-wraper__close js-gift-wraper-close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg> 
+      </a>     
+      <div class="gift-wraper__content">
+        <img src="{{ 'cart-gift-img.jpg' | file_img_url : 'master' }}" alt="gift" class="" loading="lazy" />
+        <div class="form-group">
+          <h6>¿quieres tu paquetito así de bonito? :)</h6>
+          <input type="checkbox" id="giftadd">
+          
+          <label for="giftadd">marca la casilla y nosotras nos encargamos de todo (lo quiero para regalo, +1€)</label>
+          <button type="button" class="gift-wraper__btn Button js_gift_atc" data-id="{{ settings.gift_product.selected_or_first_available_variant.id }}">+1€ - Lo quiero para regalo</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>

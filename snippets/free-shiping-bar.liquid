@@ -1,0 +1,59 @@
+{% assign mrkGifts = blank %}
+{%- capture giftTitles -%}
+  {%- for line_item in cart.items -%}
+    {%- for giftItem in settings.freegifts -%}
+      {%- if line_item.product.id == giftItem.id -%}
+        {{ line_item.title }}~~
+      {%- endif -%}      
+    {%- endfor -%}  
+  {%- endfor -%}  
+{%- endcapture -%}
+{% assign giftTitles = giftTitles | split: '~~' %}
+{% capture mrkGifts %}{% for gift in giftTitles %}{{ gift }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+<div id="free-shipping-slider2">
+  <p class="productlisttitle">
+    <span>
+        <strong>
+        {%- if mrkGifts != blank -%}
+          {% if giftTitles.size == settings.freegifts.size %}
+            {{ settings.congrats }}
+          {% else %}
+            {{ settings.yougot |  replace: '*gift*', mrkGifts }}
+          {% endif %}
+        {%- else -%}
+          {{ settings.noGift }}
+        {%- endif -%}
+        </strong>
+    </span>
+  </p>
+  <div class="progress">
+    {%- assign nextTargetAmount = 0 -%}
+    {%- assign nextGiftText = '' -%}
+    {%- assign foundCurrentLevel = false -%}
+    {%- assign progressPercentage = 0 -%}
+    {%- for giftProduct in settings.freegifts -%}
+        {%- assign targetAmount = giftProduct.metafields.custom.free_gift_target.value | times: 100 -%}
+        {%- if cart.original_total_price < targetAmount and foundCurrentLevel == false -%}
+            {%- assign mainTargetAmount = giftProduct.metafields.custom.free_gift_target.value | times: 100 -%}
+            {%- assign nextTargetAmount = settings.freegifts[forloop.index].metafields.custom.free_gift_target.value | times: 100 -%}
+            {%- assign nextGiftText = giftProduct.metafields.custom.nextGiftText.value -%}
+            {%- assign progressPercentage = cart.original_total_price | times: 100 | divided_by: targetAmount -%}
+            {%- assign foundCurrentLevel = true -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- if cart.original_total_price > targetAmount and nextTargetAmount == 0 or giftTitles.size == settings.freegifts.size -%}
+        {%- assign progressPercentage = 100 -%}
+    {%- endif -%}
+    <div class="progress-bar" style="width: {{ progressPercentage }}%" aria-valuenow="{{ progressPercentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="blackfriday-offer">
+    <span>
+        {%- if mainTargetAmount > 0 -%}
+            {%- capture text -%}{{ mainTargetAmount | minus: cart.original_total_price  | money }}{%- endcapture -%}
+            {{ nextGiftText | replace: '*money*', text }}
+        {%- else -%}
+          {{ settings.unlockall }}
+        {%- endif -%}
+    </span>
+  </div>
+</div>

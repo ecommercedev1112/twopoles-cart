@@ -1,0 +1,33 @@
+{%- assign widget_locale = shop.locale -%}
+{%- if request.path contains '/it/' -%}{%- assign widget_locale = 'it' -%}{%- endif -%}
+{%- if request.path contains '/en/' -%}{%- assign widget_locale = 'en' -%}{%- endif -%}
+{%- if request.path contains '/es/' -%}{%- assign widget_locale = 'es' -%}{%- endif -%}
+{%- if request.path contains '/fr/' -%}{%- assign widget_locale = 'fr' -%}{%- endif -%}
+{%- if request.path contains '/de/' -%}{%- assign widget_locale = 'de' -%}{%- endif -%}
+{%- if request.path contains '/pt/' -%}{%- assign widget_locale = 'pt' -%}{%- endif -%}
+
+{%- assign amount_selector = '' -%}
+{%- assign selector_items = selectors | split: ',' -%}
+{%- for selector in selector_items  %}
+  {%- assign amount_selector = amount_selector | append: '"' | append: selector | strip | append: '"' -%}
+  {% if forloop.last == false %}{%- assign amount_selector = amount_selector | append: ',' -%}{%- endif -%}
+{%- endfor -%}
+{%- assign max_amount = 1500 -%}
+<script src="https://cdn.scalapay.com/js/scalapay-widget/webcomponents-bundle.js"></script>
+<script src="https://cdn.scalapay.com/js/scalapay-widget/scalapay-widget.js"></script>
+
+  <scalapay-widget
+    amount="{{ price | plus: 0 | divided_by: 100.00 }}"
+    min="{%- if min_amount -%}{{ min_amount }}{%- else -%}5{%- endif -%}"
+    max="{{ max_amount }}"
+    amountSelectorArray='["{{ selectors }}"]'
+    logoSize="{{ size }}%"
+    priceColor=""
+    logoColor=""
+    logoAlignment="-7px"
+    numberOfPayments="3"
+    hideLogo="{%- if hide_logo -%}true{%- endif -%}"
+    hidePrice="{%- if hide_price -%}true{%- endif -%}"
+    locale="{{widget_locale}}"
+    priceBoxSelector="{{ price_box_selector }}">
+  </scalapay-widget>
